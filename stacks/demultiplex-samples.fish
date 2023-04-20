@@ -1,23 +1,15 @@
-#!/usr/bin/env bash 
+#!/usr/bin/env fish 
 
-path="~/toad-data"
-threads=4
+set path "~/toad-data"
+set threads 8 
 
 for i in 1 2 3 
-do
 
-out="plate$i"
+set out plate$i
 mkdir $out 
-sbatch \
-  --job-name demux-$i  \
-  --output %x-%j.out \
-  --mail-type END \
-  --time 24:00:00 \
-  --cpus-per-task $threads  \
-  --mem 10G \
-  --partition jro0014_amd \
-<< EOF
-#!/usr/bin/env bash
+
+set cmd \
+"#!/usr/bin/env bash
 
 process_radtags \
   -1 $path/plate$i.1.fq.gz \
@@ -35,5 +27,15 @@ process_radtags \
   --filter_illumina \
   --inline_inline \
   --retain_header
-EOF
-done
+"
+
+echo $cmd | sbatch \
+  --job-name demux-$i  \
+  --output %x-%j.out \
+  --mail-type END \
+  --time 24:00:00 \
+  --cpus-per-task $threads  \
+  --mem 10G \
+  --partition jro0014_amd
+
+end
