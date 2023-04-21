@@ -5,7 +5,7 @@ import pandas as pd
 import subprocess
 import fileinput
 
-def find_replace(file, data="../sample-data-phyl.csv", 
+def find_replace(file, data="../sample-data.csv", 
         origCol="sample_id", replCol="rename"):
     df = pd.read_csv(data)
     df.drop_duplicates(subset=["rename"], inplace=True)
