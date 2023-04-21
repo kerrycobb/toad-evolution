@@ -14,7 +14,7 @@ set cmd \
 process_radtags \
   -1 $path/plate$i.1.fq.gz \
   -2 $path/plate$i.2.fq.gz \
-  -b toad-${i}-barcodes.tsv \
+  -b barcodes-plate$i.tsv \
   --out-path $out \
   --renz_1 xbaI \
   --renz_2 ecoRI \
