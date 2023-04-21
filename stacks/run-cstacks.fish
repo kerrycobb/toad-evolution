@@ -25,7 +25,7 @@ cstacks \
 # Execute batch submission
 echo $cmd | sbatch \
   --job-name cstacks-$name \
-  --output $name/logs/%x-%j.out \
+  --output $name/%x-%j.out \
   --cpus-per-task $threads \
   --time 72:00:00 \
   --mem 30G \

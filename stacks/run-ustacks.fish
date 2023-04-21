@@ -6,7 +6,7 @@ set M $argv[3] # Maximum distance (in nucleotides) allowed between stacks
 set gaps $argv[4] # Number of gaps allowed
 
 # Constants
-set indir merged
+set indir demux/merged
 set threads 8 
 
 set logpath $name/logs
@@ -19,7 +19,7 @@ mkdir -p $outpath
 echo "popmap: $popmap" > $name/config.txt
 echo "M: $M" >> $name/config.txt
 echo "gaps: $gaps" >> $name/config.txt
-echo "indir: $indir"
+echo "rawReadsDir: $indir" >> $name/config.txt
 
 # Get ids from popmap and get count
 set ids (awk -F'\t' '{print $1}' $popmap)

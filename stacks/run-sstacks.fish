@@ -23,7 +23,8 @@ echo \"Assembling \$id\"
 sstacks \
   -c $name/stacks \
   -s $name/stacks/\$id \
-  -p $threads
+  -p $threads \
+  -o $name/stacks
 "
 
 # Execute batch submission

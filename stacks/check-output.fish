@@ -17,33 +17,43 @@ set fileNum (ls $indir/logs/$program-*.out | wc -l)
 if test $expectedSampleNum -eq $fileNum
   echo "Success: Log file number matches popmap sample number"
 else
-  echo "Error: Unexpected number of log files"
-  exit 1
+  echo "Warning: Found only $fileNum files out of $expectedSampleNum expected"
 end
 
+set finished 0
 for file in $indir/logs/$program-*.out
   
-  # Check that first line begins with Assembling and store the sample id
   set firstLine (head -n 1 $file)
   set -l firstLine (string split " " $firstLine)
-  if test $firstLine[1] = "Assembling"
-    set id $firstLine[2] 
-  else
+  set id $firstLine[2] 
+  set lastLine (tail -n 1 $file)
+
+  # Check that first line begins with Assembling and store the sample id
+  if not test $firstLine[1] = "Assembling"
     echo "Error: Unexpected output at first line in $file"
     exit 1
   end
 
   # Check that the last line says "ustacks is done."
-  set lastLine (tail -n 1 $file)
   if [ $lastLine = "$program is done." ]
+    set finished (math $finished + 1)
     echo "$id done"
   end
 end
 
+set unfinished 0
 for file in $indir/logs/$program-*.out
+  set firstLine (head -n 1 $file)
+  set -l firstLine (string split " " $firstLine)
+  set id $firstLine[2] 
+
   # Check that the last line says "ustacks is done."
   set lastLine (tail -n 1 $file)
   if [ $lastLine != "$program is done." ]
+    set unfinished (math $unfinished + 1)
     echo "$id unfinished"
   end
 end
+
+echo "$unfinished/$expectedSampleNum incomplete"
+echo "$finished/$expectedSampleNum complete"

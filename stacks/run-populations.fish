@@ -15,16 +15,17 @@ set cmd \
 "#!/usr/bin/env fish
 
 populations \
-  --in_path $name/stacks \
-  --out_path $outpath \
+  --in-path $name/stacks \
+  --out-path $outpath \
   --threads $threads \
+  --popmap $popmap \
   $args
 "
 
 # Execute batch submission
 echo $cmd | sbatch \
   --job-name pop-$name \
-  --output $name/logs/%x-%j.out \
+  --output $name/%x-%j.out \
   --cpus-per-task $threads \
   --time 4:00:00 \
   --mem 10G \

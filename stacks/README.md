@@ -4,24 +4,77 @@ module load stacks
 ./demultiplex-samples.sh
 ./merge.fish
 ```
-Moved everything related to demultiplexing into the merged directory to declutter.
-
 
 # Alignment
-
-
-./run-denovo-map.sh popmap=$1 outdir=$2 M=$3 N=$4 gaps=$5
-
 140 bp length reads
-85%: 21 
-90%: 14
-95%: 7
+Percent sequence similarity
+85%: M=21 
+90%: M=14
+95%: M=7
 
+./run-denovo-map.sh popmap=$1 outdir=$2 M=$3 gaps=$5
+
+## Bufonidae
 ```bash
-module load gcc/5.3.0
-# ./run-denovo-map.sh popmap-all.txt out-all-M42-N52-g14 42 52 14
-# ./run-denovo-map.sh popmap-all.txt out-all-M21-N28-g7 21 28 7
-./run-denovo-map.sh popmap-all.txt out-all-M21-g7 21 7 
-
-./run-ustacks.fish popmap-americanus.txt out-americanus-M7-g7 7 7 
+**./run-ustacks.fish popmap-all.txt out-all-M21-g7 21 7 
+./run-cstacks.fish out-all-M21-g7
+./run-sstacks.fish out-all-M21-g7
+./run-gstacks.fish out-all-M21-g7
+./run-populations.fish out-all-M21-g7 popmap-all.txt \
+  out-all-minSamples75 --min-samples-per-overall 0.75 --vcf --structure
 ```
+
+## Americanus Group
+```bash
+./run-ustacks.fish popmap-americanus-group.txt out-americanus-group-M14-g7 14 7 
+**./run-cstacks.fish out-americanus-group-M14-g7
+./run-sstacks.fish out-americanus-group-M14-g7
+./run-gstacks.fish out-americanus-group-M14-g7
+./run-populations.fish out-americanus-group-M14-g7 popmap-americanus-group.txt \
+  out-all-minSamples75 --min-samples-per-overall 0.75 --vcf --structure
+```
+
+## Americanus
+```bash
+./run-ustacks.fish popmap-americanus.txt out-americanus-M7-g7 7 7 
+./run-cstacks.fish out-americanus-M7-g7
+./run-sstacks.fish out-americanus-M7-g7
+./run-gstacks.fish out-americanus-M7-g7
+./run-populations.fish out-americanus-M7-g7 popmap-americanus.txt \
+  out-all-minSamples75 --min-samples-overall 0.75 --vcf --structure
+*Done
+```
+
+## Fowleri
+```bash
+./run-ustacks.fish popmap-fowleri.txt out-fowleri-M7-g7 7 7 
+./run-cstacks.fish out-fowleri-M7-g7
+./run-sstacks.fish out-fowleri-M7-g7
+./run-gstacks.fish out-fowleri-M7-g7
+./run-populations.fish out-fowleri-M7-g7 popmap-fowleri.txt \
+  out-all-minSamples75 --min-samples-overall 0.75 --vcf --structure
+*Done
+```
+
+## Terrestris 
+```bash
+./run-ustacks.fish popmap-terrestris.txt out-terrestris-M7-g7 7 7 
+**./run-cstacks.fish out-terrestris-M7-g7
+./run-sstacks.fish out-terrestris-M7-g7
+./run-gstacks.fish out-terrestris-M7-g7
+./run-populations.fish out-terrestris-M7-g7 popmap-terrestris.txt \
+  out-all-minSamples75 --min-samples-overall 0.75 --vcf --structure
+```
+
+## Woodhousii 
+```bash
+./run-ustacks.fish popmap-woodhousii.txt out-woodhousii-M7-g7 7 7 
+./run-cstacks.fish out-woodhousii-M7-g7
+./run-sstacks.fish out-woodhousii-M7-g7
+./run-gstacks.fish out-woodhousii-M7-g7
+./run-populations.fish out-woodhousii-M7-g7 popmap-woodhousii.txt \
+  out-all-minSamples75 --min-samples-overall 0.75 --vcf --structure
+*Done
+```
+
+## Hybrid Zone

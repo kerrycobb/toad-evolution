@@ -1,12 +1,12 @@
 #!/usr/bin/env fish 
 
-set path "~/toad-data"
+set path "../raw-data"
 set threads 8 
 
 for i in 1 2 3 
 
-set out plate$i
-mkdir $out 
+set out demux/plate$i
+mkdir -p $out 
 
 set cmd \
 "#!/usr/bin/env bash
