@@ -54,6 +54,6 @@ echo $cmd | sbatch \
   --output $logpath/%x-%A-%a.out \
   --array 1-$length \
   --cpus-per-task $threads \
-  --time 24:00:00 \
+  --time 72:00:00 \
   --mem 20G \
   --mail-type END 
