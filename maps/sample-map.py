@@ -41,7 +41,7 @@ def get_midpoint(lons, lats):
 def rgb(r, g, b):
     return (r/255, g/255, b/255) 
 
-def map(popmap, outpath, extent=None, counties=False):
+def map(popmap, outpath, extent=None, counties=False, rivers=False):
     popmapDf = pd.read_csv(popmap, sep='\t', header=None, names=["sample_id", "species"]) 
     popmapDf.drop_duplicates(subset="sample_id", inplace=True)
     popmapDf = popmapDf[~popmapDf["species"].isin(["nebulifer", "marina"])]
@@ -62,7 +62,8 @@ def map(popmap, outpath, extent=None, counties=False):
     ax = plt.axes(projection=proj)
     ax.add_feature(feature.LAND, linewidth=1, facecolor=landColor, edgecolor=landColor)
     ax.add_feature(feature.OCEAN, linewidth=1, facecolor=waterColor, edgecolor=waterColor)
-    ax.add_feature(feature.RIVERS, linewidth=1, facecolor=waterColor, edgecolor=waterColor)
+    if rivers:
+        ax.add_feature(feature.RIVERS, linewidth=1, facecolor=waterColor, edgecolor=waterColor)
     ax.add_feature(feature.LAKES, linewidth=1, facecolor=waterColor, edgecolor=waterColor)
     if counties:
         ax.add_feature(USCOUNTIES.with_scale("20m"), linewidth=0.1, edgecolor=borderColor)
@@ -87,8 +88,8 @@ def map(popmap, outpath, extent=None, counties=False):
 
     plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0)
     plt.title("Sampling Distribution")
-    # plt.savefig(outpath, transparent=True, bbox_inches='tight')
-    plt.show()
+    plt.savefig(outpath, transparent=True, bbox_inches='tight')
+    # plt.show()
 
 
 
