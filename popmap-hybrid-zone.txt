@@ -1,6 +1,5 @@
 aht1975	americanus
 aht2456	terrestris
-aht2564	terrestris
 aht2885	terrestris
 aht3419	terrestris
 aht3421	terrestris
@@ -32,9 +31,6 @@ kac049	terrestris
 kac050	terrestris
 kac051	terrestris
 kac052	terrestris
-kac065	terrestris
-kac066	terrestris
-kac067	terrestris
 kac070	americanus
 kac071	terrestris
 kac074	terrestris
@@ -194,10 +190,6 @@ kac201803101	americanus
 kac201803103	americanus
 kac201803104	americanus
 kac201803105	americanus
-kac201808181	terrestris
-kac201808182	terrestris
-kac201808183	terrestris
-kac201808184	terrestris
 kac201908251	americanus
 t2020	americanus
 t2040	americanus
