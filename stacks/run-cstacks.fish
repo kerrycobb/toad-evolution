@@ -2,7 +2,7 @@
 
 set name (string trim --right --chars "/" $argv[1])
 
-set threads 8
+set threads 10 
 
 # Read params from config file
 set config $name/config.txt
@@ -27,7 +27,7 @@ echo $cmd | sbatch \
   --job-name cstacks-$name \
   --output $name/%x-%j.out \
   --cpus-per-task $threads \
-  --time 72:00:00 \
-  --mem 30G \
+  --time 20-00:00:00 \
+  --mem 50G \
   --mail-type END \
   --partition jro0014_amd

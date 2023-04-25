@@ -9,11 +9,11 @@ set out demux/plate$i
 mkdir -p $out 
 
 set cmd \
-"#!/usr/bin/env bash
+"#!/usr/bin/env fish 
 
 process_radtags \
-  -1 $path/plate$i.1.fq.gz \
-  -2 $path/plate$i.2.fq.gz \
+  -1 $path/plate$i.decloned.1.fq.gz \
+  -2 $path/plate$i.decloned.2.fq.gz \
   -b barcodes-plate$i.tsv \
   --out-path $out \
   --renz_1 xbaI \
@@ -31,11 +31,13 @@ process_radtags \
 
 echo $cmd | sbatch \
   --job-name demux-$i  \
-  --output %x-%j.out \
+  --output demux/%x-%j.out \
   --mail-type END \
-  --time 24:00:00 \
-  --cpus-per-task $threads  \
+  --time 48:00:00 \
+  --cpus-per-task $threads \
   --mem 10G \
-  --partition jro0014_amd
+  --partition jro0014_amd 
 
+
+# done
 end

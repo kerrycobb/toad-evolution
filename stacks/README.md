@@ -1,8 +1,7 @@
 # Demux samples
 ```bash
-module load stacks
-./demultiplex-samples.sh
-./merge.fish
+./demultiplex-samples.fish
+sbatch --job-name merge --output demux/%x-%j.out ./merge.fish
 ```
 
 # Alignment
@@ -16,8 +15,8 @@ Percent sequence similarity
 
 ## Bufonidae
 ```bash
-**./run-ustacks.fish popmap-all.txt out-all-M21-g7 21 7 
-./run-cstacks.fish out-all-M21-g7
+./run-ustacks.fish popmap-all.txt out-all-M21-g7 21 7 
+**./run-cstacks.fish out-all-M21-g7
 ./run-sstacks.fish out-all-M21-g7
 ./run-gstacks.fish out-all-M21-g7
 ./run-populations.fish out-all-M21-g7 popmap-all.txt \
@@ -27,10 +26,10 @@ Percent sequence similarity
 ## Americanus Group
 ```bash
 ./run-ustacks.fish popmap-americanus-group.txt out-americanus-group-M14-g7 14 7 
-**./run-cstacks.fish out-americanus-group-M14-g7
+./run-cstacks.fish out-americanus-group-M14-g7
 ./run-sstacks.fish out-americanus-group-M14-g7
 ./run-gstacks.fish out-americanus-group-M14-g7
-./run-populations.fish out-americanus-group-M14-g7 popmap-americanus-group.txt \
+**./run-populations.fish out-americanus-group-M14-g7 popmap-americanus-group.txt \
   out-all-minSamples75 --min-samples-per-overall 0.75 --vcf --structure
 ```
 
@@ -59,11 +58,12 @@ Percent sequence similarity
 ## Terrestris 
 ```bash
 ./run-ustacks.fish popmap-terrestris.txt out-terrestris-M7-g7 7 7 
-**./run-cstacks.fish out-terrestris-M7-g7
+./run-cstacks.fish out-terrestris-M7-g7
 ./run-sstacks.fish out-terrestris-M7-g7
 ./run-gstacks.fish out-terrestris-M7-g7
 ./run-populations.fish out-terrestris-M7-g7 popmap-terrestris.txt \
   out-all-minSamples75 --min-samples-overall 0.75 --vcf --structure
+*Done
 ```
 
 ## Woodhousii 
@@ -78,3 +78,9 @@ Percent sequence similarity
 ```
 
 ## Hybrid Zone
+
+
+<!-- slurmstepd: error: *** JOB 602487 ON node030 CANCELLED AT 2023-04-22T03:09:19 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 602447 ON node071 CANCELLED AT 2023-04-22T01:51:49 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 602328 ON node216 CANCELLED AT 2023-04-21T22:10:47 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 602350 ON node074 CANCELLED AT 2023-04-22T08:42:44 *** -->
