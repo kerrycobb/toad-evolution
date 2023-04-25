@@ -1,3 +1,7 @@
 *.fq.gz
 out-*
 stacks/demux
+*.out
+L4/
+L5/
+L6/

@@ -21,6 +21,9 @@ echo "M: $M" >> $name/config.txt
 echo "gaps: $gaps" >> $name/config.txt
 echo "rawReadsDir: $indir" >> $name/config.txt
 
+# File to store stacks id associated with sample id
+echo -n "" > "$name/stacks-id.txt"
+
 # Get ids from popmap and get count
 set ids (awk -F'\t' '{print $1}' $popmap)
 set length (count $ids)
@@ -33,6 +36,7 @@ set cmd \
 set ids $ids
 set id \$ids[\$SLURM_ARRAY_TASK_ID]
 echo \"Assembling \$id\"
+echo \"\$id \$SLURM_ARRAY_TASK_ID\" >> $name/stacks-id.txt
 ustacks \
   -t gzfastq \
   -f $indir/\$id.1.fq.gz \
