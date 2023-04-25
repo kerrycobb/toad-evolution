@@ -1,7 +1,15 @@
 
 
-# Sample Map
+# Sample Maps
 
-## Bufonidae 
+./sample-map.py \
+  ../popmap-all.txt \
+  out/all.pdf
 
-./sample-map.py ../stacks/popmap-all.txt
+./sample-map.py \
+  ../popmap-americanus-group.txt \
+  out/americanus.pdf
+
+./sample-map.py \
+  ../popmap-non-americanus-group.txt \
+  out/non-americanus-group.pdf
