@@ -80,3 +80,24 @@
 
 ```
 
+
+
+
+
+## Fetch remote output files for use locally
+
+```bash
+./fetch.fish out-americanus-minSamples1.0-mac3-popmap2
+./fetch.fish out-americanus-minSamples99-mac3-popmap3
+
+./fetch.fish out-fowleri-minSamples1.0-mac3-popmap2 
+./fetch.fish out-fowleri-minSamples95-mac3-popmap2
+
+./fetch.fish out-terrestris-minSamples1.0-mac3-popmap2
+./fetch.fish out-terrestris-minSamples1.0-mac3-popmap3
+
+./fetch.fish out-woodhousii-minSamples80-mac3
+./fetch.fish out-woodhousii-minSamples80-mac3-popmap2
+./fetch.fish out-woodhousii-minSamples1.0-mac3-popmap3
+
+```

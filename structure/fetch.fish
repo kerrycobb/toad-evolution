@@ -4,8 +4,8 @@ set name $argv[1]
 
 mkdir $name
 
-scp -r "kac0070@easley.auburn.edu:anaxyrus/structure2/"$name"/*.out_f" $name 
+scp -r "kac0070@easley.auburn.edu:toad/structure/"$name"/*.out_f" $name 
 
 for i in (ls $name/*.out_f)
-  ../find_replace.py $i
+  ../scripts/find_replace.py $i
 end
