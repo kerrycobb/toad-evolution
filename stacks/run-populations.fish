@@ -2,13 +2,24 @@
 
 set name (string trim --right --chars "/" $argv[1])
 set popmap $argv[2]
-set outdir $argv[3]
+set outName $argv[3]
 set args $argv[4..]
 
 set threads 8
+set outpath $name/out-$outName
 
-set outpath $name/$outdir
-mkdir $outpath
+# Check if output already exists
+if test -d $outpath 
+    read -l -P "Output exists. Overwrite? [y/n]" confirm
+    if test $confirm = "y" 
+       rm -rf $outpath/* 
+    else
+        echo "Aborted"
+        exit 0 
+    end
+else
+  mkdir $outpath
+end
 
 # Create script for batch submission
 set cmd \
@@ -24,12 +35,11 @@ populations \
 
 # Execute batch submission
 echo $cmd | sbatch \
-  --job-name pop-$name \
-  --output $name/%x-%j.out \
+  --job-name pop-$name-$outName \
+  --output $outpath/%x-%j.out \
   --cpus-per-task $threads \
   --time 4:00:00 \
   --mem 10G \
-  --partition jro0014_amd #\
-  # --mail-type END \
+  --partition jro0014_amd
 
 

@@ -19,7 +19,6 @@ kac070	americanus
 kac2018021701	americanus
 kac2018021704	americanus
 kac242	americanus
-msb104571	americanus
 msb104608	americanus
 msb104644	americanus
 t2004	americanus

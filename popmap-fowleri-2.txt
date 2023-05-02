@@ -4,17 +4,13 @@ aht3665	fowleri
 hera10025	fowleri
 hera10396	fowleri
 hera10493	fowleri
-hera13722	fowleri
 hera20514	fowleri
-inhs19127	fowleri
-kac053	fowleri
 kac137	fowleri
 kac157	fowleri
 kac165	fowleri
 kac166	fowleri
 kac174	fowleri
 kac175	fowleri
-kac178	fowleri
 kac179	fowleri
 kac180	fowleri
 kac186	fowleri
@@ -27,7 +23,5 @@ kac226	fowleri
 kac240	fowleri
 kac241	fowleri
 kac244	fowleri
-msb104570	fowleri
-t3040	fowleri
 utep19941	fowleri
 utep19943	fowleri

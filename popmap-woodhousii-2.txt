@@ -3,7 +3,6 @@ msb100800	woodhousii
 msb104548	woodhousii
 msb104731	woodhousii
 msb75646	woodhousii
-msb98058	woodhousii
 utep18705	woodhousii
 utep20105	woodhousii
 utep20482	woodhousii

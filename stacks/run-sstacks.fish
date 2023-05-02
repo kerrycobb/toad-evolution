@@ -34,5 +34,5 @@ echo $cmd | sbatch \
   --array 1-$length \
   --cpus-per-task $threads \
   --time 24:00:00 \
-  --mem 20G \
+  --mem 40G \
   --mail-type END 

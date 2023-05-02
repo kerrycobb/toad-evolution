@@ -13,12 +13,7 @@ set popmap (sed -n 's/^popmap: //p' $indir/config.txt)
 set expectedSampleNum (grep -v '^\s*$' $popmap | wc -l)
 set fileNum (ls $indir/logs/$program-*.out | wc -l)
 
-# Make sure the number of log files matches the number of samples in popmap
-if test $expectedSampleNum -eq $fileNum
-  echo "Success: Log file number matches popmap sample number"
-else
-  echo "Warning: Found only $fileNum files out of $expectedSampleNum expected"
-end
+
 
 set finished 0
 for file in $indir/logs/$program-*.out
@@ -53,6 +48,13 @@ for file in $indir/logs/$program-*.out
     set unfinished (math $unfinished + 1)
     echo "$id unfinished"
   end
+end
+
+# Make sure the number of log files matches the number of samples in popmap
+if test $expectedSampleNum -eq $fileNum
+  echo "Success: Log file number matches popmap sample number"
+else
+  echo "Warning: Found only $fileNum files out of $expectedSampleNum expected"
 end
 
 echo "$unfinished/$expectedSampleNum incomplete"

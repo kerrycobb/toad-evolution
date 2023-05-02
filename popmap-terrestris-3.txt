@@ -1,17 +1,11 @@
 aht2564	terrestris
 aht3428	terrestris
-aht3813	terrestris
 aht3833	terrestris
-aht5276	terrestris
 aht5277	terrestris
 aht5278	terrestris
 kac016	terrestris
-kac065	terrestris
-kac066	terrestris
-kac067	terrestris
 kac074	terrestris
 kac201808181	terrestris
-kac201808182	terrestris
 kac201808183	terrestris
 kac201808184	terrestris
 kac230	terrestris
