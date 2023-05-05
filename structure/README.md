@@ -3,13 +3,42 @@
 ## Hybrid zone
 
 ```bash
-# ./prepare_data.fish \
-#   ../stacks/out-hybrid-zone-M14-g7/out- \
-#   ../popmap-hybrid-zone.txt \
-#   out-hybrid-zone-M14-g7-sites.75-indiv.75 \
-#   0.75
+./run-structure.fish \
+  out-hybrid-zone-minSamples1.0-mac3-popmap2 \
+  ../stacks/out-hybrid-zone-M14-g7/out-minSamples1.0-mac3-popmap2/populations.structure \
+  1,2,3 10 
+
+./run-structure.fish \
+  out-hybrid-zone-minSamples95-mac3-popmap2 \
+  ../stacks/out-hybrid-zone-M14-g7/out-minSamples95-mac3-popmap2/populations.structure \
+  1,2,3 10 
+
+./run-structure.fish \
+  out-hybrid-zone-minSamples1.0-mac3-popmap3 \
+  ../stacks/out-hybrid-zone-M14-g7/out-minSamples1.0-mac3-popmap2/populations.structure \
+  1,2,3 10 
+
+./run-structure.fish \
+  out-hybrid-zone-minSamples95-mac3-popmap3 \
+  ../stacks/out-hybrid-zone-M14-g7/out-minSamples95-mac3-popmap2/populations.structure \
+  1,2,3 10 
+```
+
+## Americanus Group 
+```bash
+
+./run-structure.fish \
+  out-americanus-group-minSamples1.0-mac3-popmap2 \
+  ../stacks/out-americanus-group-M14-g7/out-minSamples1.0-mac3-popmap2/populations.structure \
+  1,2,3,4,5,6 10 
+
+./run-structure.fish \
+  out-americanus-group-minSamples95-mac3-popmap2 \
+  ../stacks/out-americanus-group-M14-g7/out-minSamples95-mac3-popmap2/populations.structure \
+  1,2,3,4,5,6 10 
 
 ```
+
 
 ## Americanus 
 
@@ -79,4 +108,3 @@
   1,2,3,4,5 10 
 
 ```
-
