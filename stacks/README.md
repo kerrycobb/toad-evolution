@@ -16,7 +16,15 @@ Percent sequence similarity
 ## Bufonidae
 ```bash
 ./run-ustacks.fish ../popmap-all.txt out-all-M21-g7 21 7 
+```
+
+Modify config with popmap-all-subset.txt
+```bash
 **./run-cstacks.fish out-all-M21-g7
+```
+
+Change popmap back to original
+```bash
 ./run-sstacks.fish out-all-M21-g7
 ./run-gstacks.fish out-all-M21-g7
 ./run-populations.fish out-all-M21-g7 ../popmap-all.txt all --vcf --phylip-var-all
@@ -78,7 +86,7 @@ Percent sequence similarity
 ./run-cstacks.fish out-hybrid-zone-M14-g7
 ./run-sstacks.fish out-hybrid-zone-M14-g7
 ./run-gstacks.fish out-hybrid-zone-M14-g7
-./run-populations.fish out-hybrid-zone-M14-g7 ../popmap-hybrid-zone.txt out-all --vcf --hwe
+./run-populations.fish out-hybrid-zone-M14-g7 ../popmap-hybrid-zone.txt all --vcf --hwe
 **Done
 ```
 
@@ -296,8 +304,8 @@ Dropped msb98058, msb104548
 <!-- *********************************************************************** -->
 ## Americanus Group 
 Best alignments
-- min-Samples1.0-mac3-popmap2: 281 loci 
-- min-Samples95-mac3-popmap2: 1736 loci, kac244, t1020, utep19947, kac166, inhs16273 have more than 10% missing data. inhs16273 has almost 30% 
+- minSamples1.0-mac3-popmap2: 281 loci 
+- minSamples95-mac3-popmap2: 1736 loci, kac244, t1020, utep19947, kac166, inhs16273 have more than 10% missing data. inhs16273 has almost 30% 
 
 ```bash
 ./run-populations.fish \
@@ -308,7 +316,7 @@ Best alignments
 ```
 
 #### popmap-americanus-group-2
-Dropped aht3813, aht5276, hera11976,hera13722, inhs19127, kac053, kac065, kac066, 
+Dropped aht3813, aht5276, hera11976, hera13722, inhs19127, kac053, kac065, kac066, 
 kac067, kac201808182, msb104548, msb104570, msb104571, msb104608 msb98058, t3040, 
 
 
@@ -337,25 +345,59 @@ kac067, kac201808182, msb104548, msb104570, msb104571, msb104608 msb98058, t3040
 <!-- *********************************************************************** -->
 ## Hybrid Zone
 Best alignments
-- : loci 
+- minSamples1.0-mac3-popmap2: 203 loci, 136 sites 
+- minSamples95-mac3-popmap2: 1258 loci, 1194 sites
+- minSamples1.0-mac3-popmap3: 239 loci, 173 sites 
+- minSamples95-mac3-popmap3: 1370 loci, 1298 sites 
 
 ```bash
 ./run-populations.fish \
   out-hybrid-zone-M14-g7 \
   ../popmap-hybrid-zone.txt \
-  minSamples90-mac3 \
-  --min-samples-overall 0.90 --min-mac 3 --write-random-snp --vcf --structure
+  minSamples75-mac3 \
+  --min-samples-overall 0.75 --min-mac 3 --write-random-snp --vcf --structure
 
 ```
 
 #### popmap-hybrid-zone-2
-Dropped  
 
 ```bash
+
 ./run-populations.fish \
   out-hybrid-zone-M14-g7 \
   ../popmap-hybrid-zone-2.txt \
   minSamples1.0-mac3-popmap2 \
   --min-samples-overall 1.0 --min-mac 3 --write-random-snp --vcf --structure
+
+./run-populations.fish \
+  out-hybrid-zone-M14-g7 \
+  ../popmap-hybrid-zone-2.txt \
+  minSamples95-mac3-popmap2 \
+  --min-samples-overall 0.95 --min-mac 3 --write-random-snp --vcf --structure
+
+./run-populations.fish \
+  out-hybrid-zone-M14-g7 \
+  ../popmap-hybrid-zone-2.txt \
+  minSamples90-mac3-popmap2 \
+  --min-samples-overall 0.90 --min-mac 3 --write-random-snp --vcf --structure
+
+```
+
+#### popmap-hybrid-zone-3
+Dropped  
+
+```bash
+
+./run-populations.fish \
+  out-hybrid-zone-M14-g7 \
+  ../popmap-hybrid-zone-3.txt \
+  minSamples1.0-mac3-popmap3 \
+  --min-samples-overall 1.0 --min-mac 3 --write-random-snp --vcf --structure
+
+./run-populations.fish \
+  out-hybrid-zone-M14-g7 \
+  ../popmap-hybrid-zone-3.txt \
+  minSamples95-mac3-popmap3 \
+  --min-samples-overall 0.95 --min-mac 3 --write-random-snp --vcf --structure
 
 ```
