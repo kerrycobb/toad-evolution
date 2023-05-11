@@ -81,9 +81,6 @@
 ```
 
 
-
-
-
 ## Fetch remote output files for use locally
 
 ```bash
@@ -110,50 +107,77 @@
 ```
 
 ## Plot admixture plots and save qmatrix to csv file 
+```bash
 
 #### Americanus Group
-```bash
-./plot-structure.R out-americanus-group-minSamples1.0-mac3-popmap2 ../colors.txt
-./plot-structure.R out-americanus-group-minSamples1.0-mac3-popmap2 ../colors.txt -k 4 -l sp1,sp2,sp3,sp4 -p ../popmap-americanus-group-2.txt --showindlabel 
+./plot-structure.R out-americanus-group-minSamples1.0-mac3-popmap2 --showindlabel
+./plot-structure.R out-americanus-group-minSamples1.0-mac3-popmap2 -k 4 -p ../popmap-americanus-group-2.txt --showindlabel
 
-./plot-structure.R out-americanus-group-minSamples95-mac3-popmap2 ../colors.txt
-./plot-structure.R out-americanus-group-minSamples95-mac3-popmap2 ../colors.txt -k 4 -l sp1,sp2,sp3,sp4
-```
+./plot-structure.R out-americanus-group-minSamples95-mac3-popmap2 --showindlabel
+./plot-structure.R out-americanus-group-minSamples95-mac3-popmap2 -k 4 -p ../popmap-americanus-group-2.txt --showindlabel
 
 #### Americanus
-```bash
-./plot-structure.R out-americanus-minSamples1.0-mac3-popmap2 ../colors.txt 
-./plot-structure.R out-americanus-minSamples1.0-mac3-popmap2 ../colors.txt -k 2 
-./plot-structure.R out-americanus-minSamples1.0-mac3-popmap2 ../colors.txt -k 3 
-./plot-structure.R out-americanus-minSamples1.0-mac3-popmap2 ../colors.txt -k 4 
+./plot-structure.R out-americanus-minSamples1.0-mac3-popmap2 --showindlabel
+./plot-structure.R out-americanus-minSamples1.0-mac3-popmap2 -k 2
+./plot-structure.R out-americanus-minSamples1.0-mac3-popmap2 -k 3
+./plot-structure.R out-americanus-minSamples1.0-mac3-popmap2 -k 4
 
-./plot-structure.R out-americanus-minSamples99-mac3-popmap3 ../colors.txt
-./plot-structure.R out-americanus-minSamples99-mac3-popmap3 ../colors.txt -k 2 
-./plot-structure.R out-americanus-minSamples99-mac3-popmap3 ../colors.txt -k 3 
-./plot-structure.R out-americanus-minSamples99-mac3-popmap3 ../colors.txt -k 4 
-
-```
+./plot-structure.R out-americanus-minSamples99-mac3-popmap3 --showindlabel
+./plot-structure.R out-americanus-minSamples99-mac3-popmap3 -k 2
+./plot-structure.R out-americanus-minSamples99-mac3-popmap3 -k 3
+./plot-structure.R out-americanus-minSamples99-mac3-popmap3 -k 4
 
 #### Fowleri
-```bash
 
-./plot-structure.R out-fowleri-minSamples1.0-mac3-popmap2 
-./plot-structure.R out-fowleri-minSamples95-mac3-popmap2
+./plot-structure.R out-fowleri-minSamples1.0-mac3-popmap2 --showindlabel
+./plot-structure.R out-fowleri-minSamples1.0-mac3-popmap2 -k 2
+./plot-structure.R out-fowleri-minSamples1.0-mac3-popmap2 -k 3
+./plot-structure.R out-fowleri-minSamples1.0-mac3-popmap2 -k 4
 
-```
+./plot-structure.R out-fowleri-minSamples95-mac3-popmap2 --showindlabel
+./plot-structure.R out-fowleri-minSamples95-mac3-popmap2 -k 2
+./plot-structure.R out-fowleri-minSamples95-mac3-popmap2 -k 3
+./plot-structure.R out-fowleri-minSamples95-mac3-popmap2 -k 4
+
 
 #### Terrestris
-```bash
 
-./plot-structure.R out-terrestris-minSamples1.0-mac3-popmap2
-./plot-structure.R out-terrestris-minSamples1.0-mac3-popmap3
+./plot-structure.R out-terrestris-minSamples1.0-mac3-popmap2 --showindlabel
+./plot-structure.R out-terrestris-minSamples1.0-mac3-popmap2 -k 2
+./plot-structure.R out-terrestris-minSamples1.0-mac3-popmap2 -k 3 
+./plot-structure.R out-terrestris-minSamples1.0-mac3-popmap2 -k 4 
 
-```
+./plot-structure.R out-terrestris-minSamples1.0-mac3-popmap3 --showindlabel
+./plot-structure.R out-terrestris-minSamples1.0-mac3-popmap3 -k 2
+./plot-structure.R out-terrestris-minSamples1.0-mac3-popmap3 -k 3 
+./plot-structure.R out-terrestris-minSamples1.0-mac3-popmap3 -k 4 
 
 #### Woodhousii
-```bash
-./plot-structure.R out-woodhousii-minSamples80-mac3
-./plot-structure.R out-woodhousii-minSamples80-mac3-popmap2
-./plot-structure.R out-woodhousii-minSamples1.0-mac3-popmap3
+./plot-structure.R out-woodhousii-minSamples80-mac3 --showindlabel
+./plot-structure.R out-woodhousii-minSamples80-mac3 -k 2
+./plot-structure.R out-woodhousii-minSamples80-mac3 -k 3
+./plot-structure.R out-woodhousii-minSamples80-mac3 -k 4
 
+./plot-structure.R out-woodhousii-minSamples80-mac3-popmap2 --showindlabel
+./plot-structure.R out-woodhousii-minSamples80-mac3-popmap2 -k 2
+./plot-structure.R out-woodhousii-minSamples80-mac3-popmap2 -k 3
+./plot-structure.R out-woodhousii-minSamples80-mac3-popmap2 -k 4
+
+./plot-structure.R out-woodhousii-minSamples1.0-mac3-popmap3 --showindlabel
+./plot-structure.R out-woodhousii-minSamples1.0-mac3-popmap3 -k 2
+./plot-structure.R out-woodhousii-minSamples1.0-mac3-popmap3 -k 3
+./plot-structure.R out-woodhousii-minSamples1.0-mac3-popmap3 -k 4
+
+#### Hybrid Zone
+./plot-structure.R out-hybrid-zone-minSamples1.0-mac3-popmap2 --showindlabel
+./plot-structure.R out-hybrid-zone-minSamples1.0-mac3-popmap2 -k 2 --showindlabel
+
+./plot-structure.R out-hybrid-zone-minSamples95-mac3-popmap2 --showindlabel
+./plot-structure.R out-hybrid-zone-minSamples95-mac3-popmap2 -k 2 --showindlabel
+
+./plot-structure.R out-hybrid-zone-minSamples1.0-mac3-popmap3 --showindlabel
+./plot-structure.R out-hybrid-zone-minSamples1.0-mac3-popmap3 -k 2 --showindlabel
+
+./plot-structure.R out-hybrid-zone-minSamples95-mac3-popmap3 --showindlabel
+./plot-structure.R out-hybrid-zone-minSamples95-mac3-popmap3 -k 2 --showindlabel
 ```
