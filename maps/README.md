@@ -21,27 +21,52 @@
 ```
 
 # Structure Maps
-
+```bash
 ## Americanus group
+./structure-map.py americanus-group-minSamples1.0-mac3-popmap2-K-4
+./structure-map.py americanus-group-minSamples1.0-mac3-popmap2-K-5
 
+./structure-map.py americanus-group-minSamples95-mac3-popmap2-K-4
+./structure-map.py americanus-group-minSamples95-mac3-popmap2-K-5
 
 ## Americanus
-```bash
-./structure-map.py ../structure/qmats/americanus-minSamples1.0-mac3-popmap2-K-2.csv \
-    out/structure-americanus-minSamples1.0-mac3-popmap2-K-2.pdf ../colors.txt
+./structure-map.py americanus-minSamples1.0-mac3-popmap2-K-2
+./structure-map.py americanus-minSamples1.0-mac3-popmap2-K-3
+./structure-map.py americanus-minSamples1.0-mac3-popmap2-K-4
 
-./structure-map.py ../structure/qmats/americanus-minSamples1.0-mac3-popmap2-K-3.csv \
-    out/structure-americanus-minSamples1.0-mac3-popmap2-K-3.pdf ../colors.txt
+./structure-map.py americanus-minSamples99-mac3-popmap3-K-2
+./structure-map.py americanus-minSamples99-mac3-popmap3-K-3
+./structure-map.py americanus-minSamples99-mac3-popmap3-K-4
 
-./structure-map.py ../structure/qmats/americanus-minSamples1.0-mac3-popmap2-K-4.csv \
-    out/structure-americanus-minSamples1.0-mac3-popmap2-K-4.pdf ../colors.txt
+## Fowleri
+./structure-map.py fowleri-minSamples1.0-mac3-popmap2-K-2
+./structure-map.py fowleri-minSamples1.0-mac3-popmap2-K-3
+./structure-map.py fowleri-minSamples1.0-mac3-popmap2-K-4
 
-./structure-map.py ../structure/qmats/americanus-minSamples99-mac3-popmap3-K-2.csv \
-    out/structure-americanus-minSamples99-mac3-popmap2-K-2.pdf ../colors.txt
+./structure-map.py fowleri-minSamples95-mac3-popmap2-K-2
+./structure-map.py fowleri-minSamples95-mac3-popmap2-K-3
+./structure-map.py fowleri-minSamples95-mac3-popmap2-K-4
 
-./structure-map.py ../structure/qmats/americanus-minSamples99-mac3-popmap3-K-3.csv \
-    out/structure-americanus-minSamples99-mac3-popmap2-K-3.pdf ../colors.txt
+## Terrestris
+./structure-map.py terrestris-minSamples1.0-mac3-popmap2-K-2
+./structure-map.py terrestris-minSamples1.0-mac3-popmap2-K-3
+./structure-map.py terrestris-minSamples1.0-mac3-popmap2-K-4
 
-./structure-map.py ../structure/qmats/americanus-minSamples99-mac3-popmap3-K-4.csv \
-    out/structure-americanus-minSamples99-mac3-popmap2-K-4.pdf ../colors.txt
+./structure-map.py terrestris-minSamples1.0-mac3-popmap3-K-2
+./structure-map.py terrestris-minSamples1.0-mac3-popmap3-K-3
+./structure-map.py terrestris-minSamples1.0-mac3-popmap3-K-4
+
+## Woodhousii
+./structure-map.py woodhousii-minSamples1.0-mac3-popmap3-K-2
+./structure-map.py woodhousii-minSamples1.0-mac3-popmap3-K-3
+./structure-map.py woodhousii-minSamples1.0-mac3-popmap3-K-4
+
+./structure-map.py woodhousii-minSamples80-mac3-K-2
+./structure-map.py woodhousii-minSamples80-mac3-K-3
+./structure-map.py woodhousii-minSamples80-mac3-K-4
+
+./structure-map.py woodhousii-minSamples80-mac3-popmap2-K-2
+./structure-map.py woodhousii-minSamples80-mac3-popmap2-K-3
+./structure-map.py woodhousii-minSamples80-mac3-popmap2-K-4
+
 ```
