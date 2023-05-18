@@ -10,3 +10,103 @@
 ```
 
 # Run BGC
+
+Run with bash shell
+
+
+
+## popmap2 100% complete data
+```bash
+./prepare-bgc.fish ../stacks/out-hybrid-zone-M14-g7/out-minSamples1.0-mac3-popmap2/populations.snps.vcf popmap2-100 assign-popmap2-100-americanus.txt assign-popmap2-100-terrestris.txt assign-popmap2-100-admixed.txt
+
+module load bgc
+
+# Make sure these don't start at the same time or they will have identical starting seeds
+for i in $(seq 1 5); do
+  ./run-bgc.sh popmap2-100 $i;
+  sleep 10;
+done
+```
+
+
+
+## popmap2 95% complete data
+```bash
+./prepare-bgc.fish ../stacks/out-hybrid-zone-M14-g7/out-minSamples95-mac3-popmap2/populations.snps.vcf popmap2-95 assign-popmap2-95-americanus.txt assign-popmap2-95-terrestris.txt assign-popmap2-95-admixed.txt
+
+module load bgc
+
+# Make sure these don't start at the same time or they will have identical starting seeds
+for i in $(seq 1 5); do
+  ./run-bgc.sh popmap2-95 $i;
+  sleep 10;
+done
+```
+
+
+
+## popmap3 100% complete data
+```bash
+./prepare-bgc.fish ../stacks/out-hybrid-zone-M14-g7/out-minSamples1.0-mac3-popmap3/populations.snps.vcf popmap3-100 assign-popmap3-100-americanus.txt assign-popmap3-100-terrestris.txt assign-popmap3-100-admixed.txt
+
+module load bgc
+
+# Make sure these don't start at the same time or they will have identical starting seeds
+for i in $(seq 1 5); do
+  ./run-bgc.sh popmap3-100 $i;
+  sleep 10;
+done
+```
+
+
+
+## popmap3 95% complete data
+```bash
+./prepare-bgc.fish ../stacks/out-hybrid-zone-M14-g7/out-minSamples95-mac3-popmap3/populations.snps.vcf popmap3-95 assign-popmap3-95-americanus.txt assign-popmap3-95-terrestris.txt assign-popmap3-95-admixed.txt
+
+module load bgc
+
+# Make sure these don't start at the same time or they will have identical starting seeds
+for i in $(seq 1 5); do
+  ./run-bgc.sh popmap3-95 $i;
+  sleep 10;
+done
+```
+
+
+<!-- ## clust-90-missing-0.9-exclude-1   
+
+Create directory with `samples-americanus.txt`, `samples-terrestris.txt` and 
+`samples-admixed.txt` files. 
+
+```bash
+./prepare-bgc.sh clust-90-missing-0.9-exclude-1 clust-90-missing-0.9-exclude-1
+
+module load bgc
+
+# Make sure these don't start at the same time or they will have identical starting seeds
+for i in $(seq 1 5); do
+  ./run-bgc.sh clust-90-missing-0.9-exclude-1 $i;
+  sleep 10;
+done
+
+```
+
+
+## clust-90-missing-0.9-exclude-1-strict   
+Removed samples from admixed population that were not located near the contact zone.
+
+Create directory with `samples-americanus.txt`, `samples-terrestris.txt` and 
+`samples-admixed.txt` files. 
+
+```bash
+./prepare-bgc.sh clust-90-missing-0.9-exclude-1 clust-90-missing-0.9-exclude-1-strict
+
+# Make sure these don't start at the same time or they will have identical starting seeds
+module load bgc
+for i in $(seq 1 5); do
+  ./run-bgc.sh clust-90-missing-0.9-exclude-1-strict $i;
+  sleep 10;
+done
+
+``` -->
