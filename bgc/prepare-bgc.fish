@@ -31,7 +31,7 @@ vcftools \
   --vcf $filteredVCF \
   --weir-fst-pop $amerSamples \
   --weir-fst-pop $terrSamples \
-  --out $filteredPrefix.
+  --out $filteredPrefix
 
 # # Produce list of samples from VCF, don't think I need this 
 # ./list_vcf_samples.py $filteredVCF $filteredPrefix.samples.txt
