@@ -1,115 +1,100 @@
-from bgc import BGC, cline_plot
+from bgc_utils import BGC, cline_plot, outliers
 import pandas as pd
 import numpy as np
 import os
 from scipy.stats import norm
 
-name = "clust-90-missing-0.9-exclude-1-strict" 
+# name = "popmap2-100" 
+name = "popmap2-95" 
+# name = "popmap3-100" 
+# name = "popmap3-95" 
+outDir = "out-" + name
+show = False
+
 chains = 5 
-paths = [os.path.join(name, "{}_{}.hdf5".format(name, i)) for i in range(1, chains + 1)]
+paths = [os.path.join(outDir, "{}_{}.hdf5".format(name, i)) for i in range(1, chains + 1)]
 rand_loci = np.sort(np.random.randint(502, size=20))
 
 bgc = BGC(paths, 100, 0.9)
 
-# LnL = bgc.posterior("LnL")
+LnL = bgc.posterior("LnL")
 alpha = bgc.posterior("alpha")
 tau_alpha = bgc.posterior("tau-alpha")
 beta = bgc.posterior("beta")
 tau_beta = bgc.posterior("tau-beta")
-# hi = bgc.posterior("hi")
-# gamma_quantile = bgc.posterior("gamma-quantile")
-# zeta_quantile = bgc.posterior("zeta-quantile")
+hi = bgc.posterior("hi")
 
 def plot_path(param):
-    return os.path.join(name, "{}-{}.html".format(name, param))
+    return os.path.join(outDir, f"{name}-{param}.html")
 
-# LnL.histogram(plot_path("LnL")) 
-# alpha.histogram(plot_path("alpha"), rand_loci) 
-# tau_alpha.histogram(plot_path("tau_alpha")) 
-# beta.histogram(plot_path("beta"), rand_loci) 
-# tau_beta.histogram(plot_path("tau_beta")) 
-# hi.histogram(plot_path("hi")) 
-# gamma_quantile.histogram(plot_path("gamma_quantile"), rand_loci) 
-# zeta_quantile.histogram(plot_path("zeta_quantile"), rand_loci) 
+LnL.histogram(plot_path("LnL-hist"), show=show) 
+alpha.histogram(plot_path("alpha-hist"), rand_loci, show=show) 
+tau_alpha.histogram(plot_path("tau_alpha-hist"), show=show) 
+beta.histogram(plot_path("beta-hist"), rand_loci, show=show) 
+tau_beta.histogram(plot_path("tau_beta-hist"), show=show) 
+hi.histogram(plot_path("hi-hist"), show=show) 
 
-# LnL.trace(plot_path("LnL")) 
-# alpha.trace(plot_path("alpha"), rand_loci) 
-# tau_alpha.trace(plot_path("tau_alpha")) 
-# beta.trace(plot_path("beta"), rand_loci) 
-# tau_beta.trace(plot_path("tau_beta")) 
-# hi.trace(plot_path("hi")) 
-# gamma_quantile.trace(plot_path("gamma_quantile"), rand_loci) 
-# zeta_quantile.trace(plot_path("zeta_quantile"), rand_loci) 
+LnL.trace(plot_path("LnL-trace"), show=show) 
+alpha.trace(plot_path("alpha-trace"), rand_loci, show=show) 
+tau_alpha.trace(plot_path("tau_alpha-trace"), show=show) 
+beta.trace(plot_path("beta-trace"), rand_loci, show=show) 
+tau_beta.trace(plot_path("tau_beta-trace"), show=show) 
+hi.trace(plot_path("hi-trace"), show=show) 
 
-# all_sum = pd.concat(
-#     [
-#         # LnL.summary,
-#         alpha.summary,
-#         # tau_alpha.summary,
-#         beta.summary,
-#         # tau_beta.summary,
-#         # hi.summary,
-#         # gamma_quantile.summary,
-#         # zeta.summary
-#     ])   
-# all_sum.to_csv(os.path.join(name, "parameter-summaries.csv"))
+all_sum = pd.concat(
+    [
+        LnL.summary,
+        alpha.summary,
+        tau_alpha.summary,
+        beta.summary,
+        tau_beta.summary,
+        hi.summary,
+    ])   
+all_sum.to_csv(os.path.join(outDir, "parameter-summaries.csv"))
 
-# alpha_outliers1 = ~alpha.covered(0)
-# print(f"Number of Alpha outliers: {alpha_outliers1.sum()}")
+# Identify loci with excess ancestry
+alpha_covered = ~alpha.covered(0)
+print(f"Loci with excess ancestry: {alpha_covered.sum()}")
 
-# beta_outliers1 = ~beta.covered(0)
-# print(f"Number of Beta outliers: {beta_outliers1.sum()}")
+beta_covered = ~beta.covered(0)
+print(f"Number of Beta outliers: {beta_covered.sum()}")
 
-# alpha_outliers = gamma_quantile.outlier(alpha.summary["median"]) 
-# beta_outliers = zeta_quantile.outlier(beta.summary["median"]) 
+# Identify outlier loci
+out = outliers(alpha, tau_alpha, 0.95)
+print(f"Alpha outliers: {sum(out)}")
 
-# alpha_excess_loci = alpha.summary[alpha_excess].index.values
-# alpha.histogram(plot_path("alpha-trace-excess"), alpha_excess_loci)
-
-# cline_plot(alpha.summary["median"], beta.summary["median"], alpha_outliers)
-# cline_plot(alpha.summary["median"], beta.summary["median"], beta_outliers)
-
-from math import sqrt
-
-def random_effects_outliers(locus, tau, interval, central_tendancy="median"):
-    ## locus: posterior object for alpha or beta parameter
-    ## tau: posterior object for alpha tau or alpha beta estimates
-    ## interval: interval of normal probability density function 
-    ## central_tendancy: "median" or "mean"
-    # TODO: Not sure if this is the correct way to identify outliers
-    lower_quantile = round((1.0 - interval) / 2, 3)
-    upper_quantile = 1 - lower_quantile
-    tau_central = tau.summary.iloc[0][central_tendancy]
-    lower = norm.ppf(lower_quantile, loc=0, scale=sqrt(tau_central))
-    upper = norm.ppf(upper_quantile, loc=0, scale=sqrt(tau_central))
-    locus_central = locus.summary[central_tendancy]
-    print(lower, upper)
-    print(locus_central)
-    return (locus_central < lower) | (locus_central > upper)
+out = outliers(beta, tau_beta, 0.95)
+print(f"Beta outliers: {sum(out)}")
 
 
-out = random_effects_outliers(alpha, tau_alpha, 0.8)
-# print(out)
-print(sum(out))
-
-out = random_effects_outliers(beta, tau_beta, 0.8)
-# print(out)
-print(sum(out))
+## Plot clines and outliers
+# cline_plot(alpha.summary["median"], beta.summary["median"], alpha_covered)
+# cline_plot(alpha.summary["median"], beta.summary["median"], beta_covered)
 
 
+# Code to visualize prior distribution along with the posterior 
+import matplotlib.pyplot as plt
+from scipy.stats import norm
+
+def plot_tau(param, tau, path):
+    tau_central = tau.summary.iloc[0]["mean"]
+    sigma = 1/tau_central     
+    x = np.linspace(-3*sigma, 3*sigma, 100)
+    pdf = norm.pdf(x, 0, sigma)
+    fig, ax = plt.subplots()
+    ax.hist(param.summary["median"], bins="auto", density=True, alpha=0.7)
+    ax.plot(x, pdf)
+    fig.savefig(path, bbox_inches="tight")
+    # plt.show()
+
+plot_tau(alpha, tau_alpha, outDir + "/tau_alpha.pdf")
+plot_tau(beta, tau_beta, outDir + "/tau_beta.pdf")
 
 
+from scipy.stats import pearsonr
 
 
-
-
-
-
-
-
-
-
-# # Linear regression
+# Linear regression
 # from sklearn.linear_model import LinearRegression
 
 # fst = pd.read_csv(os.path.join(name, name + ".fst.csv"), index_col=0)
