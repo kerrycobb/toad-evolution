@@ -16,7 +16,12 @@ set subsampledSites $outDir/subsampled.txt
 set subsampledPrefix $outPrefix.subsampled
 set subsampledVCF $subsampledPrefix.recode.vcf
 
-mkdir $outDir
+if test -d $outDir
+  echo "Directory already exists"
+  exit 1
+else
+  mkdir $outDir
+end
 
 # Filter sites with non-biallelic sites and sites with MAC < 3
 vcftools \
@@ -46,6 +51,9 @@ vcftools \
   --recode \
   --recode-INFO-all \
   --out $subsampledPrefix
+
+# Get mean fst for the locus of each subsampled site
+./summarize_fst.py $subsampledVCF $filteredPrefix.weir.fst $outPrefix-mean-fst.csv 
 
 # Generate bgc input files
 vcf2bgc.py $subsampledVCF $amerSamples $outDir/data-americanus.bgc 
