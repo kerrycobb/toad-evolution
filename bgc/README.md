@@ -72,3 +72,16 @@ for i in $(seq 1 5); do
   sleep 10;
 done
 ```
+
+
+# Fetch remote files
+
+```bash
+./fetch.fish out-popmap2-95
+./fetch.fish out-popmap2-100
+./fetch.fish out-popmap3-95
+./fetch.fish out-popmap3-100
+```
+
+# Analyze results
+Run bgc_summary.py
