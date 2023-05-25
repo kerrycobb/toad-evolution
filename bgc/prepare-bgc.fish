@@ -23,19 +23,19 @@ else
   mkdir $outDir
 end
 
+# Compute locus fst
+vcftools \
+  --vcf $vcf \
+  --weir-fst-pop $amerSamples \
+  --weir-fst-pop $terrSamples \
+  --out $outPrefix
+
 # Filter sites with non-biallelic sites and sites with MAC < 3
 vcftools \
   --vcf $vcf \
   --max-alleles 2 \
   --recode \
   --recode-INFO-all \
-  --out $filteredPrefix
-
-# Compute locus fst
-vcftools \
-  --vcf $filteredVCF \
-  --weir-fst-pop $amerSamples \
-  --weir-fst-pop $terrSamples \
   --out $filteredPrefix
 
 # # Produce list of samples from VCF, don't think I need this 
