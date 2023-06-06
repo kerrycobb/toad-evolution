@@ -16,6 +16,7 @@ from metpy.plots import USCOUNTIES
 from mpl_toolkits.axes_grid1.inset_locator import inset_axes
 # from matplotlib.patches import Patch
 import matplotlib.patches as mpatches
+from matplotlib_scalebar.scalebar import ScaleBar
 
 colorPath = "../colors.txt"
 qmatPath = "../structure/qmats/"
