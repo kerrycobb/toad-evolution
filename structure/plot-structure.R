@@ -4,23 +4,26 @@ library(argparse)
 library(pophelper)
 library(gridExtra)
 library(ggplot2)
+# library(showtext)
+# font_add_google()
 
-colors <- readLines("../colors.txt")
 dataPath <- "../sample-data.csv"
-width <- 12 
-height <- 3 
+width <- 20 
+height <- 1 
 
 parser <- ArgumentParser()
 parser$add_argument("-k", "--selectK", default=NULL)
 parser$add_argument("-l", "--labels", default=NULL)
 parser$add_argument("--showlegend", action='store_true', default=FALSE)
 parser$add_argument("-p", "--popmap", default=NULL)
+parser$add_argument("-c", "--colors", default="../colors.txt")
 parser$add_argument("--showindlabel", action='store_true', default=FALSE)
 parser$add_argument("directory", nargs=1)
 args <- parser$parse_args()
 
 dir <- gsub("/$", "", args$directory)
 name <- gsub("^out-", "", dir) 
+colors <- readLines(args$colors)
 
 # Read in data files
 files <- list.files(dir, full.names=TRUE)
@@ -79,7 +82,8 @@ if (is.null(args$selectK)) {
     outputfilename=paste0(name, "-all-runs"),
     clustercol=colors,
     splab=paste0("K=", sub_t$k, "\nRun ", sub_t$iter),
-    basesize=11
+    basesize=11,
+    #font="Arial"
   )
   
   # Plot merged, all K
@@ -98,7 +102,8 @@ if (is.null(args$selectK)) {
       showticks=args$showindlab,
       useindlab=TRUE,
       sharedindlab=TRUE,
-      indlabsize=1,
+      indlabsize=7,
+      #font="Arial"
     #   exportplot=F, 
     #   basesize=11,
   )
@@ -136,12 +141,13 @@ if (is.null(args$selectK)) {
       showindlab=args$showindlab,
       showticks=args$showindlab,
       useindlab=TRUE,
-      indlabsize=10,
+      indlabsize=7,
       splabsize=0,
       showlegend=showlegend,
       legendlab=labels,
       legendtextsize=12,
       legendkeysize=10,
+      #font="Arial"
       # ticksize=0.1,
       # indlabspacer=0.25,
       # barbordercolour="black",
@@ -167,13 +173,14 @@ if (is.null(args$selectK)) {
       showindlab=args$showindlab,
       showticks=args$showindlab,
       useindlab=TRUE,
-      indlabsize=9,
+      indlabsize=7,
       indlabvjust=1,
       splabsize=0,
       showlegend=showlegend,
       legendlab=labels,
       legendtextsize=12,
       legendkeysize=10,
+      #font="Arial"
       # splab="",
       # pointsize=6,
       # linesize=7,
@@ -187,5 +194,6 @@ if (is.null(args$selectK)) {
     )
   }
   ggsave(path, p$plot[[1]], width=width, heigh=height, units="in")
-  print(paste("Plot written to ", path))
+  cat(paste("Plot written to ", path))
+  cat("/n")
 }
