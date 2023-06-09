@@ -354,7 +354,7 @@ Best alignments
 ./run-populations.fish \
   out-hybrid-zone-M14-g7 \
   ../popmap-hybrid-zone.txt \
-  minSamples75-mac3 \
+  minSamples75-mac3-single-snp \
   --min-samples-overall 0.75 --min-mac 3 --write-random-snp --vcf --structure
 
 ```
@@ -366,19 +366,25 @@ Best alignments
 ./run-populations.fish \
   out-hybrid-zone-M14-g7 \
   ../popmap-hybrid-zone-2.txt \
-  minSamples1.0-mac3-popmap2 \
+  minSamples1.0-mac3-popmap2-single-snp \
   --min-samples-overall 1.0 --min-mac 3 --write-random-snp --vcf --structure
 
 ./run-populations.fish \
   out-hybrid-zone-M14-g7 \
   ../popmap-hybrid-zone-2.txt \
-  minSamples95-mac3-popmap2 \
+  minSamples95-mac3-popmap2-single-snp \
   --min-samples-overall 0.95 --min-mac 3 --write-random-snp --vcf --structure
 
 ./run-populations.fish \
   out-hybrid-zone-M14-g7 \
   ../popmap-hybrid-zone-2.txt \
-  minSamples90-mac3-popmap2 \
+  minSamples95-mac3-popmap2 \
+  --min-samples-overall 0.95 --min-mac 3 --vcf
+
+./run-populations.fish \
+  out-hybrid-zone-M14-g7 \
+  ../popmap-hybrid-zone-2.txt \
+  minSamples90-mac3-popmap2-single-snp \
   --min-samples-overall 0.90 --min-mac 3 --write-random-snp --vcf --structure
 
 ```
@@ -391,13 +397,13 @@ Dropped
 ./run-populations.fish \
   out-hybrid-zone-M14-g7 \
   ../popmap-hybrid-zone-3.txt \
-  minSamples1.0-mac3-popmap3 \
+  minSamples1.0-mac3-popmap3-single-snp \
   --min-samples-overall 1.0 --min-mac 3 --write-random-snp --vcf --structure
 
 ./run-populations.fish \
   out-hybrid-zone-M14-g7 \
   ../popmap-hybrid-zone-3.txt \
-  minSamples95-mac3-popmap3 \
+  minSamples95-mac3-popmap3-single-snp \
   --min-samples-overall 0.95 --min-mac 3 --write-random-snp --vcf --structure
 
 ```

@@ -30,32 +30,10 @@ vcftools \
   --weir-fst-pop $terrSamples \
   --out $outPrefix
 
-# Filter sites with non-biallelic sites and sites with MAC < 3
-vcftools \
-  --vcf $vcf \
-  --max-alleles 2 \
-  --recode \
-  --recode-INFO-all \
-  --out $filteredPrefix
-
-# # Produce list of samples from VCF, don't think I need this 
-# ./list_vcf_samples.py $filteredVCF $filteredPrefix.samples.txt
-
-# Get list of random sites to subsample
-./subsample_vcf_sites.py $filteredVCF $subsampledSites 
-
-# Generate subsampled vcf
-vcftools \
-  --vcf $filteredVCF \
-  --positions $subsampledSites \
-  --recode \
-  --recode-INFO-all \
-  --out $subsampledPrefix
-
 # Get mean fst for the locus of each subsampled site
-./summarize_fst.py $subsampledVCF $filteredPrefix.weir.fst $outPrefix-mean-fst.csv 
+./summarize_fst.py $vcf $outPrefix.weir.fst $outPrefix-mean-fst.csv 
 
 # Generate bgc input files
-vcf2bgc.py $subsampledVCF $amerSamples $outDir/data-americanus.bgc 
-vcf2bgc.py $subsampledVCF $terrSamples $outDir/data-terrestris.bgc 
-vcf2bgc.py $subsampledVCF $admxSamples $outDir/data-admixed.bgc --parent_pop=False 
+vcf2bgc.py $vcf $amerSamples $outDir/data-americanus.bgc 
+vcf2bgc.py $vcf $terrSamples $outDir/data-terrestris.bgc 
+vcf2bgc.py $vcf $admxSamples $outDir/data-admixed.bgc --parent_pop=False 
