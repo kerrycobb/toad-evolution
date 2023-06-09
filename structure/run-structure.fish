@@ -24,8 +24,8 @@ cut -f1,3- $structureCopy > $structureCopy.tmp
 mv $structureCopy.tmp $structureCopy
 ./rename-structure.py $structureCopy
 
+
 # Get the number of samples and loci in the file
-# set nsamples (math (math (wc -l < $structureCopy) - 0) / 2)
 set nsamples (math (wc -l < $structureCopy) / 2)
 set nloci (math (awk -F'\t' 'NR==1{print NF}' $structureCopy) - 1)
 
@@ -41,7 +41,6 @@ for k in (seq (count $kVals))
     set -a seedArray (random)
   end
 end
-
 # Store the random seeds
 echo $seedArray > $outdir/random_seeds.txt
 

@@ -6,22 +6,22 @@
 ./run-structure.fish \
   out-hybrid-zone-minSamples1.0-mac3-popmap2 \
   ../stacks/out-hybrid-zone-M14-g7/out-minSamples1.0-mac3-popmap2/populations.structure \
-  1,2,3 10 
+  1,2,3,4 10 
 
 ./run-structure.fish \
   out-hybrid-zone-minSamples95-mac3-popmap2 \
   ../stacks/out-hybrid-zone-M14-g7/out-minSamples95-mac3-popmap2/populations.structure \
-  1,2,3 10 
+  1,2,3,4 10 
 
 ./run-structure.fish \
   out-hybrid-zone-minSamples1.0-mac3-popmap3 \
   ../stacks/out-hybrid-zone-M14-g7/out-minSamples1.0-mac3-popmap3/populations.structure \
-  1,2,3 10 
+  1,2,3,4 10 
 
 ./run-structure.fish \
   out-hybrid-zone-minSamples95-mac3-popmap3 \
   ../stacks/out-hybrid-zone-M14-g7/out-minSamples95-mac3-popmap3/populations.structure \
-  1,2,3 10 
+  1,2,3,4 10 
 ```
 
 ## Americanus Group 
