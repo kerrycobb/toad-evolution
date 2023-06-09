@@ -69,10 +69,23 @@
 ./structure-map.py woodhousii-minSamples80-mac3-popmap2-K-2
 ./structure-map.py woodhousii-minSamples80-mac3-popmap2-K-3
 ./structure-map.py woodhousii-minSamples80-mac3-popmap2-K-4
+```
 
-## Hybrid zone
-./structure-map.py hybrid-zone-minSamples1.0-mac3-popmap2-K-2
-./structure-map.py hybrid-zone-minSamples1.0-mac3-popmap3-K-2
-./structure-map.py hybrid-zone-minSamples95-mac3-popmap2-K-2
-./structure-map.py hybrid-zone-minSamples95-mac3-popmap3-K-2
+# Hybrid Zone Structure Maps
+```bash
+./structure-map-hybrid.py hybrid-zone-minSamples1.0-mac3-popmap2-K-2 \
+--legend "upper left" \
+--labels "americanus,terrestris"
+
+./structure-map-hybrid.py hybrid-zone-minSamples95-mac3-popmap2-K-2 \
+--legend "upper left" \
+--labels "americanus,terrestris"
+
+./structure-map-hybrid.py hybrid-zone-minSamples1.0-mac3-popmap3-K-2 \
+--legend "upper left" \
+--labels "americanus,terrestris"
+
+./structure-map-hybrid.py hybrid-zone-minSamples95-mac3-popmap3-K-2 \
+--legend "upper left" \
+--labels "americanus,terrestris"
 ```

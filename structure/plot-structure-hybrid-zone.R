@@ -8,7 +8,7 @@ library(ggplot2)
 # font_add_google()
 
 dataPath <- "../sample-data.csv"
-width <- 20 
+width <- 13 
 height <- 1 
 
 parser <- ArgumentParser()
@@ -173,7 +173,7 @@ if (is.null(args$selectK)) {
       showindlab=args$showindlab,
       showticks=args$showindlab,
       useindlab=TRUE,
-      indlabsize=7,
+      indlabsize=10,
       indlabvjust=1,
       splabsize=0,
       showlegend=showlegend,

@@ -192,16 +192,16 @@
 ./plot-structure.R out-woodhousii-minSamples80-mac3-popmap2 -k 3
 
 #### Hybrid Zone
-./plot-structure.R out-hybrid-zone-minSamples1.0-mac3-popmap2 --showindlabel
-./plot-structure.R out-hybrid-zone-minSamples1.0-mac3-popmap2 -k 2 --showindlabel
+./plot-structure.R out-hybrid-zone-minSamples1.0-mac3-popmap2 -c ../colors-hybrid.txt --showindlabel
+./plot-structure.R out-hybrid-zone-minSamples1.0-mac3-popmap2 -c ../colors-hybrid.txt -k 2 --showindlabel
 
-./plot-structure.R out-hybrid-zone-minSamples95-mac3-popmap2 --showindlabel
-./plot-structure.R out-hybrid-zone-minSamples95-mac3-popmap2 -k 2 --showindlabel
+./plot-structure.R out-hybrid-zone-minSamples95-mac3-popmap2 -c ../colors-hybrid.txt --showindlabel
+./plot-structure.R out-hybrid-zone-minSamples95-mac3-popmap2 -c ../colors-hybrid.txt -k 2 --showindlabel
 
-./plot-structure.R out-hybrid-zone-minSamples1.0-mac3-popmap3 --showindlabel
-./plot-structure.R out-hybrid-zone-minSamples1.0-mac3-popmap3 -k 2 --showindlabel
+./plot-structure.R out-hybrid-zone-minSamples1.0-mac3-popmap3 -c ../colors-hybrid.txt --showindlabel
+./plot-structure.R out-hybrid-zone-minSamples1.0-mac3-popmap3 -c ../colors-hybrid.txt -k 2 --showindlabel
 
-./plot-structure.R out-hybrid-zone-minSamples95-mac3-popmap3 --showindlabel
-./plot-structure.R out-hybrid-zone-minSamples95-mac3-popmap3 -k 2 --showindlabel
+./plot-structure.R out-hybrid-zone-minSamples95-mac3-popmap3 -c ../colors-hybrid.txt --showindlabel
+./plot-structure.R out-hybrid-zone-minSamples95-mac3-popmap3 -c ../colors-hybrid.txt -k 2 --showindlabel
 
 ```
