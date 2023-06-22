@@ -8,7 +8,7 @@ library(ggplot2)
 # font_add_google()
 
 dataPath <- "../sample-data.csv"
-width <- 13 
+width <- 8 
 height <- 1 
 
 parser <- ArgumentParser()
@@ -43,6 +43,7 @@ sub_t <- t[(nrows_k1 + 1): nrow(t), ]
 aligned <- alignK(qlist[(nrows_k1+1):length(qlist)])
 merged <- mergeQ(aligned)
 mergedCopy <- merged
+number_of_k <- length(merged)
 
 # Replace sample ids with a project id
 mergedIds <- names(merged)
@@ -67,25 +68,33 @@ if (is.null(args$selectK)) {
   s <- summariseQ(t)
   evanno <- evannoMethodStructure(data=s, exportplot=FALSE, returnplot=TRUE, 
       returndata=FALSE, basesize=12, linesize=0.7)
-  pdf(file=paste0("plots/", name, "-evanno.pdf"))
+  evannoPath <- paste0("plots/", name, "-evanno.pdf")
+  pdf(file=evannoPath)
   grid.arrange(evanno)
   invisible(dev.off())
+  system2(command="pdfcrop", args=c(evannoPath, evannoPath))
 
   # Plot All Runs
-  plotQ(
-    aligned,
-    imgoutput="join",
-    returnplot=FALSE,
-    exportplot=TRUE,
-    imgtype="pdf",
-    exportpath="plots",
-    outputfilename=paste0(name, "-all-runs"),
-    clustercol=colors,
-    splab=paste0("K=", sub_t$k, "\nRun ", sub_t$iter),
-    basesize=11,
-    #font="Arial"
-  )
-  
+  allRunsPath <- paste0("plots/", name, "-all-runs", ".pdf")
+  start <- c(0:(number_of_k-1)) * 10 + 1
+  plots <- c()
+  for (i in 1:number_of_k){
+    a <- start[i]
+    b <- start[i] + 9
+    p <- plotQ(
+      aligned[a:b],
+      imgoutput="join",
+      returnplot=TRUE,
+      exportplot=FALSE,
+      splab=paste0("K=", sub_t$k[a:b], "\nRun ", sub_t$iter[a:b]),
+      basesize=11)
+    plots[[i]] <- p$plot[[1]]
+  }
+  pdf(file=allRunsPath)
+  grid.arrange(grobs=plots, ncol=3, nrow=1)
+  invisible(dev.off())
+  system2(command="pdfcrop", args=c(allRunsPath, allRunsPath))
+
   # Plot merged, all K
   plotQ(
       merged,
@@ -93,8 +102,8 @@ if (is.null(args$selectK)) {
       outputfilename=paste0(name, "-merged-all-k"),
       exportpath="plots",
       imgtype="pdf",
-      exportplot=T,
-      returnplot=F,
+      exportplot=TRUE,
+      returnplot=FALSE,
       clustercol=colors,
       splab=paste0("K=", names(merged)),
       # sortind="Cluster1",
@@ -107,13 +116,13 @@ if (is.null(args$selectK)) {
     #   exportplot=F, 
     #   basesize=11,
   )
+  mergedKPath <- paste0("plots/", name, "-merged-all-k.pdf")
+  system2(command="pdfcrop", args=c(mergedKPath, mergedKPath))
 
 ################################################################################
   # Make plot for given value of K
 } else {
   k <- args$selectK
-
-
 
   # Determine if legend should be shown
   if (!is.null(args$labels) || args$showlegend ) {
@@ -193,7 +202,9 @@ if (is.null(args$selectK)) {
       # barbordercolour="black",
     )
   }
-  ggsave(path, p$plot[[1]], width=width, heigh=height, units="in")
+  p <- p$plot[[1]] + labs(y="Admixture\nProportions") + theme(axis.title=element_text(size=9, color="black")) 
+  ggsave(path, p, width=width, heigh=height, units="in")
   cat(paste("Plot written to ", path))
   cat("/n")
+  system2(command="pdfcrop", args=c(path, path))
 }
