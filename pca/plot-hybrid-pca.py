@@ -6,7 +6,7 @@ from functools import reduce
 import plotly.graph_objects as go
 import numpy as np
 import plotly.io as pio   
-pio.kaleido.scope.mathjax = None # Needed to element mathjax loading box being displayed on pdfs
+pio.kaleido.scope.mathjax = None # Needed to elemenate mathjax loading box being displayed on pdfs
 
 def plotPCA(dir, qmatFile, assign, reverse_y=False):
     name = dir.rstrip('/').lstrip("out-") 
@@ -91,21 +91,27 @@ def plotPCA(dir, qmatFile, assign, reverse_y=False):
         width=500,
         height=500,
         margin=dict(l=0,r=0,b=0,t=0),
-        legend=dict(
-            yanchor="top",
-            y=0.99,
-            xanchor="left",
-            x=0.01))
+        showlegend=False)
+        # legend=dict(
+        #     yanchor="top",
+        #     y=0.99,
+        #     xanchor="left",
+        #     x=0.01))
     fig.update_xaxes(
         title_text=f"PC1",
         title_font=dict(size=20),
         showline=True,
-        ticks="outside")
+        ticks="outside",
+        linecolor="black",
+        linewidth=1)
     fig.update_yaxes(
         title_text=f"Ancestry Coefficient",
         title_font=dict(size=20),
         showline=True,
-        ticks="outside")
+        ticks="outside", 
+        linecolor="black",
+        linewidth=1)
+
     plot_path = f"out-plots/{name}-admx-coeff.pdf"
     fig.write_image(plot_path) 
     # fig.show()
