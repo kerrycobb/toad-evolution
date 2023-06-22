@@ -12,9 +12,6 @@ set outDir out-$name
 set outPrefix out-$name/$name
 set filteredPrefix $outPrefix.filtered
 set filteredVCF $filteredPrefix.recode.vcf
-set subsampledSites $outDir/subsampled.txt
-set subsampledPrefix $outPrefix.subsampled
-set subsampledVCF $subsampledPrefix.recode.vcf
 
 if test -d $outDir
   echo "Directory already exists"
@@ -23,17 +20,22 @@ else
   mkdir $outDir
 end
 
-# Compute locus fst
+# Filter sites with non-biallelic sites
 vcftools \
   --vcf $vcf \
+  --max-alleles 2 \
+  --recode \
+  --recode-INFO-all \
+  --out $filteredPrefix
+
+# Compute locus fst
+vcftools \
+  --vcf $filteredVCF \
   --weir-fst-pop $amerSamples \
   --weir-fst-pop $terrSamples \
   --out $outPrefix
 
-# Get mean fst for the locus of each subsampled site
-./summarize_fst.py $vcf $outPrefix.weir.fst $outPrefix-mean-fst.csv 
-
 # Generate bgc input files
-vcf2bgc.py $vcf $amerSamples $outDir/data-americanus.bgc 
-vcf2bgc.py $vcf $terrSamples $outDir/data-terrestris.bgc 
-vcf2bgc.py $vcf $admxSamples $outDir/data-admixed.bgc --parent_pop=False 
+vcf2bgc.py $filteredVCF $amerSamples $outDir/data-americanus.bgc 
+vcf2bgc.py $filteredVCF $terrSamples $outDir/data-terrestris.bgc 
+vcf2bgc.py $filteredVCF $admxSamples $outDir/data-admixed.bgc --parent_pop=False 
