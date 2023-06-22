@@ -175,7 +175,7 @@ plate2,29,C,5,p172,KAC 183,kac183,terrestris,kac183_terrestris,m,32.385793,-85.2
 plate2,30,C,6,p173,KAC 184,kac184,terrestris,kac184_terrestris,m,32.385793,-85.235653,2019,5,nhei,NheI_C,AACTCGTCG,ecori,EcoRI_6,GTATGCAT
 plate2,31,C,7,p174,KAC 185,kac185,terrestris,kac185_terrestris,m,32.385793,-85.235653,2019,5,nhei,NheI_C,AACTCGTCG,ecori,EcoRI_7,CACATGTCT
 plate2,32,C,8,p175,KAC 186,kac186,fowleri,kac186_fowleri,m,32.385793,-85.235653,2019,5,nhei,NheI_C,AACTCGTCG,ecori,EcoRI_8,TGTGCACGAT
-plate2,33,C,9,p176,KAC 187,kac187,terrestris,kac187_terrestris,m,32.645479,-85.551346,2020,2,nhei,NheI_C,AACTCGTCG,ecori,EcoRI_9,GCATCAT
+plate2,33,C,9,p176,KAC 187,kac187,americanus,kac187_americanus,m,32.645479,-85.551346,2020,2,nhei,NheI_C,AACTCGTCG,ecori,EcoRI_9,GCATCAT
 plate2,93,H,9,p176,KAC 187,kac187,americanus,kac187_americanus,m,32.645479,-85.551346,2020,2,nhei,NheI_H,TCATGGTCAG,ecori,EcoRI_9,GCATCAT
 plate2,34,C,10,p177,KAC 188,kac188,terrestris,kac188_terrestris,f,32.409763,-85.602077,2020,2,nhei,NheI_C,AACTCGTCG,ecori,EcoRI_10,ATGCTGTT
 plate2,35,C,11,p178,KAC 189,kac189,terrestris,kac189_terrestris,f,33.091522,-86.566863,2020,3,nhei,NheI_C,AACTCGTCG,ecori,EcoRI_11,CATGACCTT
