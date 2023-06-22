@@ -84,4 +84,9 @@ done
 ```
 
 # Analyze results
-Run bgc_summary.py
+```bash
+./bgc_summary.py out-popmap2-95 5 100 0.9
+./bgc_summary.py out-popmap3-95 5 100 0.9
+./bgc_summary.py out-popmap2-100 5 100 0.9
+./bgc_summary.py out-popmap3-100 5 100 0.9
+```
