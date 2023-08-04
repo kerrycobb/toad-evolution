@@ -139,12 +139,12 @@ def map(name, extent=None, legend=None, labels=None):
     ax.add_feature(county_data, linewidth=0.2, edgecolor=rgb(150, 150, 150), 
             facecolor="none")
 
-
     # Highlight areas for zoom
     zoom1_box = sgeom.box(-86.72,33.16,-86.36,32.86) #
     # ax.add_geometries([zoom1_box], crs=ccrs.Geodetic(), facecolor="none", 
     #         linewidth=1, edgecolor="black", zorder=1000)
     is_zoom1 = gdf.within(zoom1_box)
+    zoom1_box_gdf = gpd.GeoDataFrame(index=[0], crs=proj.proj4_params, geometry=[zoom1_box])
 
     zoom2_box = sgeom.box(-85.86,32.84,-85.4,32.36) #
     # ax.add_geometries([zoom2_box], crs=ccrs.Geodetic(), facecolor="none", 
@@ -220,7 +220,8 @@ def map(name, extent=None, legend=None, labels=None):
 
     ###########################
     ## Zoom maps
-    def create_zoom_ax(points, scale_pos):
+
+    def create_zoom_ax(points, scale_pos, stream=None):
         ## Zoom 2 Map
         lon0, lat0 = get_midpoint(gdf[points].longitude, gdf[points].latitude)
         # Create Map
@@ -231,16 +232,29 @@ def map(name, extent=None, legend=None, labels=None):
                 name="admin_2_counties")
         ax.add_feature(county_data, linewidth=0.2, edgecolor=rgb(150, 150, 150), 
                 facecolor="none")
+        ax.add_feature(cfeature.RIVERS.with_scale("10m"), linewidth=4)
+        # ax.add_feature(cfeature.LAKES.with_scale("10m"))
+
         # Add pies
         for ix, row in gdf[points].iterrows():
             props = row[0:2].to_list()
             draw_pie(ax, props, row.longitude, row.latitude, 100, colors)
         ## Scale Bar
         scale_bar(ax, 5, scale_pos) 
+
+        if stream is not None:
+            ax.autoscale(False)
+            stream.plot(ax=ax, edgecolor=cfeature.COLORS["water"], linewidth=2)
+
         return ax
 
-    zoom1_ax = create_zoom_ax(is_zoom1, (0.9, 0.95))    
-    zoom2_ax = create_zoom_ax(is_zoom2, (0.1, 0.95))    
+    waxahatchee = gpd.read_file("water-data/waxahatchee-creek.geojson")
+    waxahatchee.to_crs(proj.proj4_params, inplace=True)
+    sougahatchee = gpd.read_file("water-data/sougahatchee-creek.geojson")
+    sougahatchee.to_crs(proj.proj4_params, inplace=True)
+
+    zoom1_ax = create_zoom_ax(is_zoom1, (0.9, 0.95), waxahatchee)
+    zoom2_ax = create_zoom_ax(is_zoom2, (0.1, 0.95), sougahatchee)
 
     ## Reposition Zoom Axes
     ax.get_figure().canvas.draw()
@@ -278,9 +292,6 @@ def map(name, extent=None, legend=None, labels=None):
     plt.savefig(outPath, bbox_inches='tight', pad_inches=0)
     print(f"Plot output to {outPath}")
     # plt.show()
-
-
-
 
 if __name__ == "__main__":
     fire.Fire(map)

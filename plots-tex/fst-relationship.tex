@@ -1,0 +1,42 @@
+\documentclass[border=10pt,varwidth=30cm]{standalone}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox} % Needed for letters to align with top
+\usepackage{tikz}
+\usepackage{rotating}
+\usepackage{multirow}
+
+
+\begin{document}
+\begin{figure}
+\noindent
+% \setlength\tabcolsep{10pt}
+\begin{tabular}[t]{cccc}
+
+\textbf{(A)} & \huge $\alpha$ & {\textbf{(B)}} & \huge $\beta$ \\
+
+\begin{sideways} \Large $\alpha$ \end{sideways} & 
+\raisebox{-0.5\height}{\includegraphics[width=0.3\textwidth]{../bgc/out-popmap2-95/fst-alpha-relation.pdf}} &  
+
+\begin{sideways} \Large $\beta$ \end{sideways} & 
+\raisebox{-0.5\height}{\includegraphics[width=0.3\textwidth]{../bgc/out-popmap2-95/fst-beta-relation.pdf}} \\
+
+\rule{0pt}{4ex} & \large $F_{ST}$ & & \large $F_{ST}$ \\
+
+
+% \begin{tabular}{c c c}
+%   & Juvenile salmon & High density \\
+%   \rotatebox[origin=c]{90}{2015} & 
+%   \raisebox{-0.5\height}{\includegraphics[width=0.4\textwidth]{example-image-a}} &
+%   \raisebox{-0.5\height}{\includegraphics[width=0.4\textwidth]{example-image-b}} \\
+
+%   \rotatebox[origin=c]{90}{2016} & 
+%   \raisebox{-0.5\height}{\includegraphics[width=0.4\textwidth]{example-image-c}} &
+%   \raisebox{-0.5\height}{\includegraphics[width=0.4\textwidth]{example-image}}
+
+% \end{tabular}
+
+
+
+\end{tabular}
+\end{figure}
+\end{document}
