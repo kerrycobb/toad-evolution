@@ -3,9 +3,6 @@
 NAME=${1%/} # Remove trailing slash
 CHAIN=$2
 OUTDIR=out-$NAME/
-# BGC_AMER=$NAME/bgc-americanus.bgc
-# BGC_TERR=$NAME/bgc-terrestris.bgc
-# BGC_ADM=$NAME/bgc-admixed.bgc
 
 MCMC_SAMPLES=1000000
 THIN=1000
