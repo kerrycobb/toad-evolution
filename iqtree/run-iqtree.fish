@@ -12,9 +12,14 @@ set datapath $outdir$name".phy"
 
 mkdir $outdir
 
+# set script """ 
+#   cp $inpath $datapath
+#   ../scripts/find_replace.py $datapath
+#   iqtree -m GTR -bb 1000 -o $outgroup -s $datapath -nt $cpus -mem $mem
+# """
+
 set script """ 
   cp $inpath $datapath
-  ../scripts/find_replace.py $datapath
   iqtree -m GTR -bb 1000 -o $outgroup -s $datapath -nt $cpus -mem $mem
 """
 
