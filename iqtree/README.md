@@ -4,11 +4,13 @@
 ```bash
 ./run-iqtree.fish \
   all-c80-s61 \
-  /scratch/kac0070/toad-phyl/pyrad/all-c80-s61_outfiles/all-c80-s61.phy
+  /scratch/kac0070/toad-phyl/pyrad/all-c80-s61_outfiles/all-c80-s61.phy \
+  hera10484
 
 ./run-iqtree.fish \
   subset-c80-s28 \
-  /scratch/kac0070/toad-phyl/pyrad/all-subset-c80-s28_outfiles/all-subset-c80-s28.phy
+  /scratch/kac0070/toad-phyl/pyrad/all-subset-c80-s28_outfiles/all-subset-c80-s28.phy \
+  hera10484
 ```
 
 

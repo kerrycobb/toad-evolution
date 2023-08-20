@@ -23,6 +23,11 @@ set script """
   iqtree -m GTR -bb 1000 -o $outgroup -s $datapath -nt $cpus -mem $mem
 """
 
+set script """ 
+  cp $inpath $datapath
+  iqtree -m GTR -bb 1000 -o $outgroup -s $datapath -nt $cpus -mem $mem
+"""
+
 sbatch \
   --job-name "iqtree-"$name \
   --output $outdir%x-%j.out \
