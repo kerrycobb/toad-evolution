@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="CGImap 0.8.8 (227205 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+ <node id="7672248437" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0517931" lon="-86.6009689"/>
+ <node id="7672248439" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0566440" lon="-86.6177092"/>
+ <node id="7672248440" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0992266" lon="-86.6362878"/>
+ <node id="7672248441" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0989086" lon="-86.6359114"/>
+ <node id="7672248442" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0983715" lon="-86.6355861"/>
+ <node id="7672248443" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0979790" lon="-86.6354705"/>
+ <node id="7672248444" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0977409" lon="-86.6352856"/>
+ <node id="7672248445" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0971514" lon="-86.6340902"/>
+ <node id="7672248446" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0968118" lon="-86.6330391"/>
+ <node id="7672248447" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0963645" lon="-86.6310512"/>
+ <node id="7672248448" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0963690" lon="-86.6305362"/>
+ <node id="7672248449" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0964993" lon="-86.6299354"/>
+ <node id="7672248450" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0970414" lon="-86.6289122"/>
+ <node id="7672248451" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0973245" lon="-86.6279895"/>
+ <node id="7672248452" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0974908" lon="-86.6269863"/>
+ <node id="7672248453" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0974683" lon="-86.6265947"/>
+ <node id="7672248454" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0973964" lon="-86.6262836"/>
+ <node id="7672248455" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0972211" lon="-86.6259939"/>
+ <node id="7672248456" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0970144" lon="-86.6258866"/>
+ <node id="7672248457" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0967313" lon="-86.6258115"/>
+ <node id="7672248458" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0960976" lon="-86.6259778"/>
+ <node id="7672248459" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0957830" lon="-86.6262246"/>
+ <node id="7672248460" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0954314" lon="-86.6271312"/>
+ <node id="7672248461" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0950573" lon="-86.6274821"/>
+ <node id="7672248462" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0947046" lon="-86.6277277"/>
+ <node id="7672248463" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0942766" lon="-86.6277582"/>
+ <node id="7672248464" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0933199" lon="-86.6276051"/>
+ <node id="7672248465" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0928817" lon="-86.6274775"/>
+ <node id="7672248466" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0925610" lon="-86.6272414"/>
+ <node id="7672248467" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0922831" lon="-86.6266673"/>
+ <node id="7672248468" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0919039" lon="-86.6246475"/>
+ <node id="7672248469" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0917197" lon="-86.6234412"/>
+ <node id="7672248470" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0909818" lon="-86.6209076"/>
+ <node id="7672248471" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0894030" lon="-86.6160687"/>
+ <node id="7672248472" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0892105" lon="-86.6158582"/>
+ <node id="7672248473" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0890502" lon="-86.6158039"/>
+ <node id="7672248474" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0882224" lon="-86.6156329"/>
+ <node id="7672248475" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0879268" lon="-86.6156709"/>
+ <node id="7672248476" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0875391" lon="-86.6158036"/>
+ <node id="7672248477" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0873134" lon="-86.6158264"/>
+ <node id="7672248478" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0870820" lon="-86.6158018"/>
+ <node id="7672248479" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0864019" lon="-86.6156197"/>
+ <node id="7672248480" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0853768" lon="-86.6154901"/>
+ <node id="7672248481" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0849497" lon="-86.6153818"/>
+ <node id="7672248482" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0839638" lon="-86.6150107"/>
+ <node id="7672248483" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0820587" lon="-86.6138263"/>
+ <node id="7672248484" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0784390" lon="-86.6107382"/>
+ <node id="7672248485" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0777175" lon="-86.6100554"/>
+ <node id="7672248486" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0769556" lon="-86.6088429"/>
+ <node id="7672248487" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0766346" lon="-86.6082550"/>
+ <node id="7672248488" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0765233" lon="-86.6079553"/>
+ <node id="7672248489" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0764852" lon="-86.6076443"/>
+ <node id="7672248490" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0766106" lon="-86.6071537"/>
+ <node id="7672248491" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0768236" lon="-86.6069109"/>
+ <node id="7672248492" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0770652" lon="-86.6067668"/>
+ <node id="7672248493" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0771065" lon="-86.6065657"/>
+ <node id="7672248494" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0770683" lon="-86.6063836"/>
+ <node id="7672248495" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0768681" lon="-86.6061598"/>
+ <node id="7672248496" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0756008" lon="-86.6053148"/>
+ <node id="7672248497" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0744438" lon="-86.6049430"/>
+ <node id="7672248498" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0741923" lon="-86.6048075"/>
+ <node id="7672248499" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0740319" lon="-86.6046257"/>
+ <node id="7672248500" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0738261" lon="-86.6040101"/>
+ <node id="7672248501" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0737085" lon="-86.6035508"/>
+ <node id="7672248502" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0736256" lon="-86.6033945"/>
+ <node id="7672248503" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0734893" lon="-86.6033434"/>
+ <node id="7672248504" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0730958" lon="-86.6034494"/>
+ <node id="7672248505" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0726307" lon="-86.6037269"/>
+ <node id="7672248506" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0725051" lon="-86.6039916"/>
+ <node id="7672248507" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0721989" lon="-86.6050331"/>
+ <node id="7672248508" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0721035" lon="-86.6061408"/>
+ <node id="7672248509" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0721624" lon="-86.6068606"/>
+ <node id="7672248510" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0724072" lon="-86.6078962"/>
+ <node id="7672248511" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0723976" lon="-86.6083021"/>
+ <node id="7672248512" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0723109" lon="-86.6086251"/>
+ <node id="7672248513" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0719933" lon="-86.6090401"/>
+ <node id="7672248514" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0709793" lon="-86.6100388"/>
+ <node id="7672248515" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0707638" lon="-86.6101561"/>
+ <node id="7672248516" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0705143" lon="-86.6101922"/>
+ <node id="7672248517" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0702951" lon="-86.6101291"/>
+ <node id="7672248518" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0688193" lon="-86.6091859"/>
+ <node id="7672248519" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0684734" lon="-86.6090235"/>
+ <node id="7672248520" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0671860" lon="-86.6088419"/>
+ <node id="7672248521" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0667248" lon="-86.6089366"/>
+ <node id="7672248522" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0664750" lon="-86.6090583"/>
+ <node id="7672248523" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0662539" lon="-86.6093538"/>
+ <node id="7672248524" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0654452" lon="-86.6107512"/>
+ <node id="7672248525" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0653148" lon="-86.6113286"/>
+ <node id="7672248526" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0652561" lon="-86.6123622"/>
+ <node id="7672248527" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0650272" lon="-86.6132422"/>
+ <node id="7672248528" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0647518" lon="-86.6140032"/>
+ <node id="7672248529" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0641913" lon="-86.6151050"/>
+ <node id="7672248530" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0636052" lon="-86.6159321"/>
+ <node id="7672248531" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0623955" lon="-86.6171781"/>
+ <node id="7672248532" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0615944" lon="-86.6181909"/>
+ <node id="7672248533" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0609307" lon="-86.6186916"/>
+ <node id="7672248534" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0604317" lon="-86.6188089"/>
+ <node id="7672248535" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0599364" lon="-86.6188089"/>
+ <node id="7672248536" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0580573" lon="-86.6180082"/>
+ <node id="7672248537" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0574244" lon="-86.6178243"/>
+ <node id="7672248538" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0541724" lon="-86.6162597"/>
+ <node id="7672248539" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0537722" lon="-86.6159459"/>
+ <node id="7672248540" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0536575" lon="-86.6157716"/>
+ <node id="7672248541" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0545307" lon="-86.6106995"/>
+ <node id="7672248542" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0550440" lon="-86.6067059"/>
+ <node id="7672248543" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0551561" lon="-86.6044497"/>
+ <node id="7672248544" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0550351" lon="-86.6032634"/>
+ <node id="7672248545" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0548045" lon="-86.6022935"/>
+ <node id="7672248546" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0545512" lon="-86.6017657"/>
+ <node id="7672248547" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0538993" lon="-86.6012044"/>
+ <node id="7672248548" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0535009" lon="-86.6010736"/>
+ <node id="7672248549" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0525259" lon="-86.6009928"/>
+ <node id="7672248550" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0507275" lon="-86.6009141"/>
+ <node id="7672248551" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0496581" lon="-86.6005440"/>
+ <node id="7672248552" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0484135" lon="-86.5999394"/>
+ <node id="7672248553" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0476504" lon="-86.5994007"/>
+ <node id="7672248554" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0466413" lon="-86.5984355"/>
+ <node id="7672248555" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0447078" lon="-86.5952133"/>
+ <node id="7672248556" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0418608" lon="-86.5878737"/>
+ <node id="7672248557" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0397291" lon="-86.5848516"/>
+ <node id="7672248558" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0329925" lon="-86.5776160"/>
+ <node id="7672248559" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0303498" lon="-86.5720891"/>
+ <node id="7672248560" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0283984" lon="-86.5683982"/>
+ <node id="7672248561" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0269656" lon="-86.5665298"/>
+ <node id="7672248562" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0251049" lon="-86.5655554"/>
+ <node id="7672248563" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0214511" lon="-86.5647128"/>
+ <node id="7672248564" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0200287" lon="-86.5636616"/>
+ <node id="7672248565" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0196959" lon="-86.5617761"/>
+ <node id="7672248566" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0195723" lon="-86.5556289"/>
+ <node id="7672248567" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0188310" lon="-86.5527058"/>
+ <node id="7672248568" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0190352" lon="-86.5485133"/>
+ <node id="7672248569" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0202229" lon="-86.5462307"/>
+ <node id="7672248570" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0231264" lon="-86.5402607"/>
+ <node id="7672248571" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0243502" lon="-86.5371365"/>
+ <node id="7672248572" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0242821" lon="-86.5345112"/>
+ <node id="7672248573" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0237061" lon="-86.5271041"/>
+ <node id="7672248574" visible="true" version="1" changeset="87371129" timestamp="2020-07-01T02:09:44Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0218604" lon="-86.5173328"/>
+ <node id="7672395994" visible="true" version="1" changeset="87373227" timestamp="2020-07-01T03:47:16Z" user="RollTideRoll_asdfjkll" uid="4879795" lat="33.0316265" lon="-86.5747592"/>
+ <way id="821693715" visible="true" version="2" changeset="87373227" timestamp="2020-07-01T03:47:16Z" user="RollTideRoll_asdfjkll" uid="4879795">
+  <nd ref="7672248440"/>
+  <nd ref="7672248441"/>
+  <nd ref="7672248442"/>
+  <nd ref="7672248443"/>
+  <nd ref="7672248444"/>
+  <nd ref="7672248445"/>
+  <nd ref="7672248446"/>
+  <nd ref="7672248447"/>
+  <nd ref="7672248448"/>
+  <nd ref="7672248449"/>
+  <nd ref="7672248450"/>
+  <nd ref="7672248451"/>
+  <nd ref="7672248452"/>
+  <nd ref="7672248453"/>
+  <nd ref="7672248454"/>
+  <nd ref="7672248455"/>
+  <nd ref="7672248456"/>
+  <nd ref="7672248457"/>
+  <nd ref="7672248458"/>
+  <nd ref="7672248459"/>
+  <nd ref="7672248460"/>
+  <nd ref="7672248461"/>
+  <nd ref="7672248462"/>
+  <nd ref="7672248463"/>
+  <nd ref="7672248464"/>
+  <nd ref="7672248465"/>
+  <nd ref="7672248466"/>
+  <nd ref="7672248467"/>
+  <nd ref="7672248468"/>
+  <nd ref="7672248469"/>
+  <nd ref="7672248470"/>
+  <nd ref="7672248471"/>
+  <nd ref="7672248472"/>
+  <nd ref="7672248473"/>
+  <nd ref="7672248474"/>
+  <nd ref="7672248475"/>
+  <nd ref="7672248476"/>
+  <nd ref="7672248477"/>
+  <nd ref="7672248478"/>
+  <nd ref="7672248479"/>
+  <nd ref="7672248480"/>
+  <nd ref="7672248481"/>
+  <nd ref="7672248482"/>
+  <nd ref="7672248483"/>
+  <nd ref="7672248484"/>
+  <nd ref="7672248485"/>
+  <nd ref="7672248486"/>
+  <nd ref="7672248487"/>
+  <nd ref="7672248488"/>
+  <nd ref="7672248489"/>
+  <nd ref="7672248490"/>
+  <nd ref="7672248491"/>
+  <nd ref="7672248492"/>
+  <nd ref="7672248493"/>
+  <nd ref="7672248494"/>
+  <nd ref="7672248495"/>
+  <nd ref="7672248496"/>
+  <nd ref="7672248497"/>
+  <nd ref="7672248498"/>
+  <nd ref="7672248499"/>
+  <nd ref="7672248500"/>
+  <nd ref="7672248501"/>
+  <nd ref="7672248502"/>
+  <nd ref="7672248503"/>
+  <nd ref="7672248504"/>
+  <nd ref="7672248505"/>
+  <nd ref="7672248506"/>
+  <nd ref="7672248507"/>
+  <nd ref="7672248508"/>
+  <nd ref="7672248509"/>
+  <nd ref="7672248510"/>
+  <nd ref="7672248511"/>
+  <nd ref="7672248512"/>
+  <nd ref="7672248513"/>
+  <nd ref="7672248514"/>
+  <nd ref="7672248515"/>
+  <nd ref="7672248516"/>
+  <nd ref="7672248517"/>
+  <nd ref="7672248518"/>
+  <nd ref="7672248519"/>
+  <nd ref="7672248520"/>
+  <nd ref="7672248521"/>
+  <nd ref="7672248522"/>
+  <nd ref="7672248523"/>
+  <nd ref="7672248524"/>
+  <nd ref="7672248525"/>
+  <nd ref="7672248526"/>
+  <nd ref="7672248527"/>
+  <nd ref="7672248528"/>
+  <nd ref="7672248529"/>
+  <nd ref="7672248530"/>
+  <nd ref="7672248531"/>
+  <nd ref="7672248532"/>
+  <nd ref="7672248533"/>
+  <nd ref="7672248534"/>
+  <nd ref="7672248535"/>
+  <nd ref="7672248536"/>
+  <nd ref="7672248537"/>
+  <nd ref="7672248439"/>
+  <nd ref="7672248538"/>
+  <nd ref="7672248539"/>
+  <nd ref="7672248540"/>
+  <nd ref="7672248541"/>
+  <nd ref="7672248542"/>
+  <nd ref="7672248543"/>
+  <nd ref="7672248544"/>
+  <nd ref="7672248545"/>
+  <nd ref="7672248546"/>
+  <nd ref="7672248547"/>
+  <nd ref="7672248548"/>
+  <nd ref="7672248549"/>
+  <nd ref="7672248437"/>
+  <nd ref="7672248550"/>
+  <nd ref="7672248551"/>
+  <nd ref="7672248552"/>
+  <nd ref="7672248553"/>
+  <nd ref="7672248554"/>
+  <nd ref="7672248555"/>
+  <nd ref="7672248556"/>
+  <nd ref="7672248557"/>
+  <nd ref="7672248558"/>
+  <nd ref="7672395994"/>
+  <nd ref="7672248559"/>
+  <nd ref="7672248560"/>
+  <nd ref="7672248561"/>
+  <nd ref="7672248562"/>
+  <nd ref="7672248563"/>
+  <nd ref="7672248564"/>
+  <nd ref="7672248565"/>
+  <nd ref="7672248566"/>
+  <nd ref="7672248567"/>
+  <nd ref="7672248568"/>
+  <nd ref="7672248569"/>
+  <nd ref="7672248570"/>
+  <nd ref="7672248571"/>
+  <nd ref="7672248572"/>
+  <nd ref="7672248573"/>
+  <nd ref="7672248574"/>
+  <tag k="name" v="Waxahatchee Creek"/>
+  <tag k="waterway" v="stream"/>
+ </way>
+</osm>
