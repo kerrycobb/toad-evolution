@@ -1,37 +1,61 @@
-from ete3 import Tree, TreeStyle, NodeStyle
-import ete3 as et
+#!/usr/bin/env python
+
+# import ete3 as et
+from ete3 import Tree, TreeStyle, faces, NodeStyle, AttrFace
 import pandas as pd
-
-df = pd.read_csv("../structure/qmat-clust-90-indel-16-samples-198-include-americanus-group-1-K-3.csv")
-# df = pd.read_csv("../structure/qmat-clust-90-indel-16-samples-179-include-americanus-group-2-K-3.csv")
-df.rename(columns={df.columns[0]: "id"}, inplace=True)
-
-t = et.Tree("clust-80-indel-16-snps-0p3-samples-140-exclude-2.phy.contree")
-t.set_outgroup("hera10484_unknown")
-t.ladderize(direction=0)
-
-def layout(node):
-    if node.is_leaf():
-        node.set_style(NodeStyle(dict(size=0)))
-        search = df[df["id"] == node.name]
-        if len(search) == 1:
-            row = search.iloc[0]
-            if row["Cluster1"] > 0.9:
-                node.set_style(NodeStyle(dict(fgcolor="blue")))
-            elif row["Cluster2"] > 0.9:
-                node.set_style(NodeStyle(dict(fgcolor="red")))
-            elif row["Cluster3"] > 0.9: 
-                node.set_style(NodeStyle(dict(fgcolor="green")))
-            else:
-                node.set_style(NodeStyle(dict(fgcolor="pink")))
-    else:
-        node.set_style(NodeStyle(dict(size=0)))
+import fire 
 
 
-ts = et.TreeStyle()
+def plot(path, output):
+    df = pd.read_csv("../sample-data.csv").set_index("sample_id")
+    df = df[~df.index.duplicated(keep="first")]
+    d = df.to_dict("index")
+
+
+    def layout(node):
+        node.img_style["size"] = 0
+        if node.is_leaf():
+            id = d[node.name]["id"] 
+            sp = d[node.name]["species"]
+            text = faces.TextFace(f"{id} {sp}")
+            text.margin_left = 5
+            faces.add_face_to_node(text, node, column=0)
+        else:
+            pass 
+
+
+    t = Tree(path)
+    t.set_outgroup("hera10484")
+    t.ladderize(direction=0)
+    ts = TreeStyle()
+    ts.show_branch_support = True
+    ts.layout_fn = layout
+    ts.show_leaf_name = False
+    # t.show(tree_style=ts)
+    t.render(output, tree_style=ts)
+
+# def layout(node):
+#     if node.is_leaf():
+#         node.set_style(NodeStyle(dict(size=0)))
+#         search = df[df["id"] == node.name]
+#         if len(search) == 1:
+#             row = search.iloc[0]
+#             if row["Cluster1"] > 0.9:
+#                 node.set_style(NodeStyle(dict(fgcolor="blue")))
+#             elif row["Cluster2"] > 0.9:
+#                 node.set_style(NodeStyle(dict(fgcolor="red")))
+#             elif row["Cluster3"] > 0.9: 
+#                 node.set_style(NodeStyle(dict(fgcolor="green")))
+#             else:
+#                 node.set_style(NodeStyle(dict(fgcolor="pink")))
+#     else:
+#         node.set_style(NodeStyle(dict(size=0)))
+
+
+    # ts = et.TreeStyle()
 # ts.branch_vertical_margin = 1
-ts.layout_fn = layout
-ts.scale = 10000 
+# ts.layout_fn = layout
+    # ts.scale = 10000 
 
 
 # ns = et.NodeStyle()
@@ -55,4 +79,8 @@ ts.scale = 10000
 
 #     n.set_style(ns)
 
-t.show(tree_style=ts)
+    # t.show(tree_style=ts)
+
+
+if __name__ == "__main__":
+    fire.Fire(plot)

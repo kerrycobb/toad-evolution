@@ -63,6 +63,7 @@ def rgb(r, g, b):
 #                    transform=ccrs.Geodetic(), zorder=100)
 
 def map(name, extent=None, counties=False, rivers=False, title=None, legend=False, labels=None):
+    ## Extent: x0, x1, y0, y1 
     data = pd.read_csv("../sample-data.csv")
     data.drop_duplicates(subset="sample_id", inplace=True)
     qmat = pd.read_csv(qmatPath + name +".csv", index_col=0)
@@ -98,7 +99,8 @@ def map(name, extent=None, counties=False, rivers=False, title=None, legend=Fals
         ax.add_feature(USCOUNTIES.with_scale("20m"), linewidth=0.1, 
                        edgecolor=borderColor, zorder=20)
     if extent:
-        ax.set_extent([float(x.strip()) for x in extent.split(",")])
+        # ax.set_extent([float(x.strip()) for x in extent.split(",")])
+        ax.set_extent(extent)
 
     for ix, row in merged.iterrows():
         props = row[0:k].to_list()
@@ -133,7 +135,7 @@ def map(name, extent=None, counties=False, rivers=False, title=None, legend=Fals
     outPath = outDir + "structure-" + name + ".pdf" 
     plt.savefig(outPath, transparent=True, bbox_inches='tight', pad_inches=0)
     print(f"Plot output to {outPath}")
-    # plt.show()
+    plt.show()
 
 if __name__ == "__main__":
     fire.Fire(map)

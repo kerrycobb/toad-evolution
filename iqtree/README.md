@@ -13,6 +13,10 @@
   hera10484
 ```
 
+## Output tree to pdf
+```bash
+./treefig.py all-c80-s61.phy.contree all-c80-s61-iqtree.pdf 
+```
 
 <!-- ## c80-500-loci-defaults 
 ```bash

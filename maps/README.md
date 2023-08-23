@@ -1,7 +1,7 @@
 
 # Interactive maps
 ```bash
-./interactive-map.py ../popmap-all.txt out/interactiv-samples-all.html 
+./interactive-map.py ../popmap-all.txt out/interactive-samples-all.html 
 ./interactive-map.py ../popmap-hybrid-zone.txt out/interactive-samples-hybrid-zone.html 
 ```
 

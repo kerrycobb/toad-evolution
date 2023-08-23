@@ -145,18 +145,20 @@
 ./plot-structure.R out-americanus-group-minSamples1.0-mac3-popmap2 -k 4 -p ../popmap-americanus-group-2.txt --showindlabel
   
 ./plot-structure.R out-americanus-group-minSamples95-mac3-popmap2 --showindlabel
-./plot-structure.R out-americanus-group-minSamples95-mac3-popmap2 -k 4 -p ../popmap-americanus-group-2.txt --showindlabel
+./plot-structure.R out-americanus-group-minSamples95-mac3-popmap2 -k 4 \
+  -p ../popmap-americanus-group-2.txt --showindlabel --showlegend \
+  --labels fowleri,terrestris,americanus,woodhousii
   
 #### Americanus
 ./plot-structure.R out-americanus-minSamples1.0-mac3-popmap2 --showindlabel
-./plot-structure.R out-americanus-minSamples1.0-mac3-popmap2 -k 2
-./plot-structure.R out-americanus-minSamples1.0-mac3-popmap2 -k 3
-./plot-structure.R out-americanus-minSamples1.0-mac3-popmap2 -k 4
+./plot-structure.R out-americanus-minSamples1.0-mac3-popmap2 -k 2 --showindlabel
+./plot-structure.R out-americanus-minSamples1.0-mac3-popmap2 -k 3 --showindlabel
+./plot-structure.R out-americanus-minSamples1.0-mac3-popmap2 -k 4 --showindlabel
 
 ./plot-structure.R out-americanus-minSamples99-mac3-popmap3 --showindlabel
-./plot-structure.R out-americanus-minSamples99-mac3-popmap3 -k 2
-./plot-structure.R out-americanus-minSamples99-mac3-popmap3 -k 3
-./plot-structure.R out-americanus-minSamples99-mac3-popmap3 -k 4
+./plot-structure.R out-americanus-minSamples99-mac3-popmap3 -k 2 --showindlabel
+./plot-structure.R out-americanus-minSamples99-mac3-popmap3 -k 3 --showindlabel
+./plot-structure.R out-americanus-minSamples99-mac3-popmap3 -k 4 --showindlabel
 
 #### Fowleri
 ./plot-structure.R out-fowleri-minSamples1.0-mac3-popmap2 --showindlabel
