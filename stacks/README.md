@@ -90,6 +90,15 @@ Change popmap back to original
 **Done
 ```
 
+## Fowleri & Woodhousii 
+```bash
+**./run-ustacks.fish ../popmap-fowleri-woodhousii.txt out-fowleri-woodhousii-M14-g14 14 14 
+./run-cstacks.fish out-americanus-M14-g14
+./run-sstacks.fish out-americanus-M14-g14
+./run-gstacks.fish out-americanus-M14-g14
+./run-populations.fish out-americanus-M14-g14 ../popmap-americanus.txt all --vcf
+Done
+```
 
 # Filtering
 

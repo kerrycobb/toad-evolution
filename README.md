@@ -31,3 +31,7 @@ Collecting and wetlab data associated with each sample used in the phylogeograph
 
 ## sample-data-hyb.csv
 Collecting and wetlab data associated with each sample used in the hybridization study. 
+
+## Popmaps
+### popmap-all-2.txt
+Includes americanus-popmap3, fowleri-popmap2, terrestris-popmap3, and woodhousii-popmap3 samples

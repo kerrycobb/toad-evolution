@@ -21,6 +21,8 @@ ipyrad -m merged params-toad-1.txt params-toad-2.txt params-toad-3.txt
 ipyrad -p params-merged.txt -b all-subset-c80 ../popmap-all-subset.txt
 ipyrad -p params-merged.txt -b all-c80 ../popmap-all.txt
 ipyrad -p params-merged.txt -b all-subset-c80-s28 ../popmap-all-subset.txt
+ipyrad -p params-merged.txt -b all-2-c80-s78 ../popmap-all-2.txt
+
 ```
 
 Edit params files 
@@ -50,6 +52,10 @@ sbatch -J c80-defaults-subset -o %x-%j.out --mail-type END -t 6-00:00:00 -c 10 \
 sbatch -J c80-s28-subset -o %x-%j.out --mail-type END -t 6-00:00:00 -c 10 \
   --mem 50G --partition jro0014_amd \
   --wrap "ipyrad -p params-all-subset-c80-s28.txt -s 234567 -c 10"
+
+sbatch -J c80-s78-all-2 -o %x-%j.out --mail-type END -t 6-00:00:00 -c 10 \
+  --mem 50G --partition jro0014_amd \
+  --wrap "ipyrad -p params-all-2-c80-s78.txt -s 234567 -c 10"
 ```
 
 
