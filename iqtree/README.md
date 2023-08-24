@@ -11,6 +11,12 @@
   subset-c80-s28 \
   /scratch/kac0070/toad-phyl/pyrad/all-subset-c80-s28_outfiles/all-subset-c80-s28.phy \
   hera10484
+
+./run-iqtree.fish \
+  all-2-c80-s78 \
+  /scratch/kac0070/toad-phyl/pyrad/all-2-c80-s78_outfiles/all-2-c80-s78.phy \
+  kac243
+  
 ```
 
 
