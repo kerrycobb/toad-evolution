@@ -27,7 +27,7 @@ echo $cmd | sbatch \
   --job-name cstacks-$name \
   --output $name/%x-%j.out \
   --cpus-per-task $threads \
-  --time 20-00:00:00 \
+  --time 6-00:00:00 \
   --mem 50G \
   --mail-type END \
   --partition jro0014_amd

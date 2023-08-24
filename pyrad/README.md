@@ -22,7 +22,7 @@ ipyrad -p params-merged.txt -b all-subset-c80 ../popmap-all-subset.txt
 ipyrad -p params-merged.txt -b all-c80 ../popmap-all.txt
 ipyrad -p params-merged.txt -b all-subset-c80-s28 ../popmap-all-subset.txt
 ipyrad -p params-merged.txt -b all-2-c80-s78 ../popmap-all-2.txt
-
+ipyrad -p params-merged.txt -b all-2-l200-c80-s73 ../popmap-all-2-l200.txt
 ```
 
 Edit params files 
@@ -56,6 +56,11 @@ sbatch -J c80-s28-subset -o %x-%j.out --mail-type END -t 6-00:00:00 -c 10 \
 sbatch -J c80-s78-all-2 -o %x-%j.out --mail-type END -t 6-00:00:00 -c 10 \
   --mem 50G --partition jro0014_amd \
   --wrap "ipyrad -p params-all-2-c80-s78.txt -s 234567 -c 10"
+
+# Filter individuals with less than 200 loci and loci not found in at least 75% of individuals (73)
+sbatch -J all-2-l200-c80-s73 -o %x-%j.out --mail-type END -t 6-00:00:00 -c 10 \
+  --mem 50G --partition jro0014_amd \
+  --wrap "ipyrad -p params-all-2-l200-c80-s73.txt -s 234567 -c 10"
 ```
 
 

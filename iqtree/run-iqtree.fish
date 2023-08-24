@@ -32,11 +32,21 @@ sbatch \
   --job-name "iqtree-"$name \
   --output $outdir%x-%j.out \
   --mail-type END \
-  --partition jro0014_amd \
   --time 2-00:00:00 \
   --cpus-per-task $cpus \
   --mem $mem \
   --wrap $script 
+
+# sbatch \
+#   --job-name "iqtree-"$name \
+#   --output $outdir%x-%j.out \
+#   --mail-type END \
+#   --partition jro0014_amd \
+#   --time 2-00:00:00 \
+#   --cpus-per-task $cpus \
+#   --mem $mem \
+#   --wrap $script 
+
 
 
 

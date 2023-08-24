@@ -35,3 +35,6 @@ Collecting and wetlab data associated with each sample used in the hybridization
 ## Popmaps
 ### popmap-all-2.txt
 Includes americanus-popmap3, fowleri-popmap2, terrestris-popmap3, and woodhousii-popmap3 samples
+
+### popmap-all-2-l200.txt
+Same as popmap-all-2.txt but excluding samples with less than 200 loci.
