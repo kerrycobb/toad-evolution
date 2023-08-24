@@ -92,11 +92,11 @@ Change popmap back to original
 
 ## Fowleri & Woodhousii 
 ```bash
-**./run-ustacks.fish ../popmap-fowleri-woodhousii.txt out-fowleri-woodhousii-M14-g14 14 14 
-./run-cstacks.fish out-americanus-M14-g14
-./run-sstacks.fish out-americanus-M14-g14
-./run-gstacks.fish out-americanus-M14-g14
-./run-populations.fish out-americanus-M14-g14 ../popmap-americanus.txt all --vcf
+./run-ustacks.fish ../popmap-fowleri-woodhousii.txt out-fowleri-woodhousii-M14-g14 14 14 
+**./run-cstacks.fish out-fowleri-woodhousii-M14-g14
+./run-sstacks.fish out-fowleri-woodhousii-M14-g14
+./run-gstacks.fish out-fowleri-woodhousii-M14-g14
+./run-populations.fish out-fowleri-woodhousii-M14-g14 ../popmap-americanus.txt all --vcf
 Done
 ```
 
