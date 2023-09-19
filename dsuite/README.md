@@ -1,26 +1,17 @@
 
 Run with bash
 
-# c80-500-loci-defaults 
-```bash
-mkdir c80-500-loci-defaults/
-```
-
-Make `c80-500-loci-defaults/ignore.txt` file with Rhinella sample id to ignore Rhinella
+cp popmap, rename Incillius to indicate that it is the outgroup
 
 ```bash
-./make_pop_map.py \
-  /scratch/kac0070/toad-phyl/pyrad/c80-defaults/c80-500-loci-defaults_outfiles/c80-500-loci-defaults.vcf \
-  c80-500-loci-defaults/popmap.txt \
-  nebulifer \
-  c80-500-loci-defaults/ignore.txt
+mkdir all-subset-c80-s28
 
 module load gcc/5.3.0
 
-./run-dsuite \
-  c80-500-loci-defaults \
-  /scratch/kac0070/toad-phyl/pyrad/c80-defaults/c80-500-loci-defaults_outfiles/c80-500-loci-defaults.vcf \
+./run-dsuite.bash \
+  all-subset-c80-s28 \
+  /scratch/kac0070/toad-phyl/pyrad/all-subset-c80-s28_outfiles/all-subset-c80-s28.vcf \
   sp-tree-incillius.tre \
-  popmap.txt
+  popmap-all-subset.txt
 
 ```
