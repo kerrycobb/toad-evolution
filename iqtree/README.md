@@ -16,7 +16,12 @@
   all-2-c80-s78 \
   /scratch/kac0070/toad-phyl/pyrad/all-2-c80-s78_outfiles/all-2-c80-s78.phy \
   kac243
-  
+
+./run-iqtree.fish \
+  all-2-l200-c80-s73 \
+  /scratch/kac0070/toad-phyl/pyrad/all-2-l200-c80-s73_outfiles/all-2-l200-c80-s73.phy \
+  kac243
+
 ```
 
 ## Output tree to pdf
