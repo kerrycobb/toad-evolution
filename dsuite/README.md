@@ -24,3 +24,9 @@ module load gcc/5.3.0
   popmap.txt
 
 ```
+
+# Fetch output
+
+```bash
+./fetch.fish all-subset-c80-s28/
+```
