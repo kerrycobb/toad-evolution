@@ -1,22 +1,23 @@
 #!/usr/bin/env python
 
 import fire 
+import subprocess
 import pandas as pd
 import matplotlib.pyplot as plt
 import cartopy.crs as ccrs
 from cartopy import feature
-from cartopy.mpl.gridliner import LONGITUDE_FORMATTER, LATITUDE_FORMATTER
-import cartopy.mpl.ticker as cticker
-import matplotlib.ticker as mticker
+# from cartopy.mpl.gridliner import LONGITUDE_FORMATTER, LATITUDE_FORMATTER
+# import cartopy.mpl.ticker as cticker
+# import matplotlib.ticker as mticker
 import seaborn as sns
-import numpy as np
-import math
-import cartopy.io.shapereader as shpreader
-from metpy.plots import USCOUNTIES
+# import numpy as np
+# import math
+# import cartopy.io.shapereader as shpreader
+# from metpy.plots import USCOUNTIES
 from mpl_toolkits.axes_grid1.inset_locator import inset_axes
 # from matplotlib.patches import Patch
 import matplotlib.patches as mpatches
-from matplotlib_scalebar.scalebar import ScaleBar
+# from matplotlib_scalebar.scalebar import ScaleBar
 
 colorPath = "../colors.txt"
 qmatPath = "../structure/qmats/"
@@ -89,17 +90,20 @@ def map(name, extent=None, counties=False, rivers=False, title=None, legend=Fals
     ax.add_feature(feature.LAND, linewidth=0, facecolor=landColor, 
                    edgecolor=landColor, zorder=11)
     if rivers:
-        ax.add_feature(feature.RIVERS, linewidth=1, facecolor=waterColor, 
-                       edgecolor=waterColor, zorder=12)
+        ax.add_feature(feature.NaturalEarthFeature('physical', 'rivers_lake_centerlines', '50m'),
+                linewidth=1.5, facecolor="None", edgecolor=waterColor, zorder=22)
+        # ax.add_feature(feature.RIVERS, linewidth=1.5, facecolor=waterColor, 
+                    #    edgecolor=waterColor, zorder=22)
     ax.add_feature(feature.LAKES, linewidth=0, facecolor=waterColor, 
                    edgecolor=waterColor, zorder=13)
-    # ax.add_feature(feature.BORDERS, linewidth=1, edgecolor=borderColor, zorder=22)
+    # # ax.add_feature(feature.BORDERS, linewidth=1, edgecolor=borderColor, zorder=22)
     ax.add_feature(feature.STATES, linewidth=0.2, edgecolor=borderColor, zorder=21)
-    if counties:
-        ax.add_feature(USCOUNTIES.with_scale("20m"), linewidth=0.1, 
-                       edgecolor=borderColor, zorder=20)
+    # if counties:
+    #     ax.add_feature(USCOUNTIES.with_scale("20m"), linewidth=0.1, 
+    #                    edgecolor=borderColor, zorder=20)
     if extent:
         # ax.set_extent([float(x.strip()) for x in extent.split(",")])
+        # ax.set_extent(extent)
         ax.set_extent(extent)
 
     for ix, row in merged.iterrows():
@@ -115,27 +119,32 @@ def map(name, extent=None, counties=False, rivers=False, title=None, legend=Fals
         ax_sub.set_aspect("equal")
         ax.scatter(row["longitude"], row["latitude"], alpha=0, transform=ccrs.Geodetic())
     
-    if title:
-        plt.title(title)
+    # if title:
+    #     plt.title(title)
 
-    if legend:
-        if labels:
-            legLabels = labels.split(",")
-        else:
-            legLabels = qmat.columns[i]
-        legendElements = [] 
-        for i in range(k):
-            legendElements.append(mpatches.Patch(
-                facecolor="blue", edgecolor="black", label=legLabels
-            ))
+    # if legend:
+    #     if labels:
+    #         legLabels = labels.split(",")
+    #     else:
+    #         legLabels = qmat.columns[i]
+    #     legendElements = [] 
+    #     for i in range(k):
+    #         legendElements.append(mpatches.Patch(
+    #             facecolor="blue", edgecolor="black", label=legLabels
+    #         ))
     
-        ax.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0)
-        ax.legend(handles=legendElements)
+    #     ax.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0)
+    #     ax.legend(handles=legendElements)
 
     outPath = outDir + "structure-" + name + ".pdf" 
-    plt.savefig(outPath, transparent=True, bbox_inches='tight', pad_inches=0)
+    # plt.savefig(outPath, transparent=True, bbox_inches='tight', pad_inches=0)
+    # plt.savefig(outPath, pad_inches=0)
+    plt.savefig(outPath)
     print(f"Plot output to {outPath}")
-    plt.show()
+    cropPath = outPath + "-cropped"
+    subprocess.run(f"pdfcrop {outPath} {cropPath}", shell=True)
+    subprocess.run(f"mv {cropPath} {outPath}", shell=True)
+    # plt.show()
 
 if __name__ == "__main__":
     fire.Fire(map)

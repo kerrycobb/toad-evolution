@@ -26,10 +26,12 @@
 
 ## Output tree to pdf
 ```bash
-./treefig.py all-c80-s61.phy.contree all-c80-s61-iqtree.pdf hera10484 
-./treefig.py all-2-c80-s78.phy.contree all-2-c80-s78-iqtree.pdf kac243  
-./treefig.py all-2-l200-c80-s73.phy.contree all-2-l200-c80-s73.pdf kac243
-./treefig.py subset-c80-s28.phy.contree subset-c80-s28-iqtree.pdf hera10484 
+# ./treefig.py all-c80-s61.phy.contree all-c80-s61-iqtree.pdf hera10484 
+# ./treefig.py all-2-c80-s78.phy.contree all-2-c80-s78-iqtree.pdf kac243  
+# ./treefig.py all-2-l200-c80-s73.phy.contree all-2-l200-c80-s73.pdf kac243
+# ./treefig.py subset-c80-s28.phy.contree subset-c80-s28-iqtree.pdf hera10484 
+
+./treefig.py all-2-l200-c80-s73.phy.contree all-2-l200-c80-s73.pdf all-2-l200-c80-s73-collapsed.pdf kac243  
 ```
 
 <!-- ## c80-500-loci-defaults 

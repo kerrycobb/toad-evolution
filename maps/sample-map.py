@@ -82,7 +82,7 @@ def map(popmap, outpath, extent=None, counties=False, rivers=False):
             color=style[sp]["color"],
             marker=style[sp]["shape"],
             zorder=style[sp]["order"],
-            s=1) 
+            s=6) 
 
     # ax.scatter(lon0, lat0, transform=ccrs.Geodetic(),)
 

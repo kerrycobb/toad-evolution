@@ -18,6 +18,11 @@
 ./sample-map.py \
   ../popmap-non-americanus-group.txt \
   out/samples-non-americanus-group.pdf
+
+./sample-map.py \
+  ../popmap-all-2-americanus-group.txt \
+  out/samples-americanus-group.pdf
+
 ```
 
 # Structure Maps
@@ -35,8 +40,8 @@
 ./structure-map.py americanus-minSamples1.0-mac3-popmap2-K-3
 ./structure-map.py americanus-minSamples1.0-mac3-popmap2-K-4
 
-./structure-map.py americanus-minSamples99-mac3-popmap3-K-2
-./structure-map.py americanus-minSamples99-mac3-popmap3-K-3
+./structure-map.py americanus-minSamples99-mac3-popmap3-K-2 --rivers
+./structure-map.py americanus-minSamples99-mac3-popmap3-K-3 --rivers
 ./structure-map.py americanus-minSamples99-mac3-popmap3-K-4
 
 ## Fowleri
@@ -53,8 +58,8 @@
 ./structure-map.py terrestris-minSamples1.0-mac3-popmap2-K-3
 ./structure-map.py terrestris-minSamples1.0-mac3-popmap2-K-4
 
-./structure-map.py terrestris-minSamples1.0-mac3-popmap3-K-2
-./structure-map.py terrestris-minSamples1.0-mac3-popmap3-K-3
+./structure-map.py terrestris-minSamples1.0-mac3-popmap3-K-2 --rivers --extent -89.0767,-81.0538,28,33
+./structure-map.py terrestris-minSamples1.0-mac3-popmap3-K-3 --rivers --extent -89.0767,-81.0538,28,33
 ./structure-map.py terrestris-minSamples1.0-mac3-popmap3-K-4
 
 ## Woodhousii
@@ -84,4 +89,11 @@
 
 ./structure-map-hybrid.py hybrid-zone-minSamples95-mac3-popmap3-K-2 \
 --labels "americanus,terrestris"
+```
+
+# Fowleri x Woodhousii Map
+
+```bash
+./structure-map.py fowleri-woodhousii-minSamples1.0-mac3-K-2 --extent -114.5402,-72,25,47
+
 ```

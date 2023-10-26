@@ -244,7 +244,7 @@ plate2,78,G,6,p237,KAC 239,kac239,terrestris,kac239_terrestris,?,30.8016249,-86.
 plate2,79,G,7,p238,KAC 240,kac240,fowleri,kac240_fowleri,f,32.6432798,-85.3711405,2020,6,nhei,NheI_G,CTGCAACTG,ecori,EcoRI_7,CACATGTCT
 plate2,80,G,8,p239,KAC 241,kac241,fowleri,kac241_fowleri,f,32.6432798,-85.3711405,2020,6,nhei,NheI_G,CTGCAACTG,ecori,EcoRI_8,TGTGCACGAT
 plate2,81,G,9,p240,KAC 242,kac242,americanus,kac242_americanus,m,34.504456,-85.637683,2020,7,nhei,NheI_G,CTGCAACTG,ecori,EcoRI_9,GCATCAT
-plate2,82,G,10,p241,KAC 243,kac243,nebulifer,kac243_nebulifer,,,,,,nhei,NheI_G,CTGCAACTG,ecori,EcoRI_10,ATGCTGTT
+plate2,82,G,10,p241,KAC 243,kac243,nebulifer,kac243_nebulifer,,30.391397,-90.620491,,,nhei,NheI_G,CTGCAACTG,ecori,EcoRI_10,ATGCTGTT
 plate2,83,G,11,p242,KAC 244,kac244,fowleri,kac244_fowleri,m,32.8926113,-93.8875622,2021,9,nhei,NheI_G,CTGCAACTG,ecori,EcoRI_11,CATGACCTT
 plate3,24,B,12,p243,MSB 100793,msb100793,microscaphus,msb100793_microscaphus,,37.27153801,-114.464781,2020,,nhei,NheI_B,TTAGGCAG,ecori,EcoRI_12,TGCAGTGAGT
 plate3,25,C,1,p244,MSB 100800,msb100800,woodhousii,msb100800_woodhousii,,36.73611667,-114.2197167,2020,,nhei,NheI_C,AACTCGTCG,ecori,EcoRI_1,CTAACGT

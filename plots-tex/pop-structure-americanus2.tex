@@ -1,0 +1,15 @@
+
+\documentclass[border=10pt,varwidth=30cm]{standalone}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox} % Needed for letters to align with top
+\usepackage{tikz}
+\usepackage{multirow}
+\begin{document}
+\begin{figure}
+\begin{tabular}[t]{cc}
+    \multicolumn{2}{c}{\Large \textit{A. americanus} Population Structure, K=2} \\
+  {\textbf{\large A)}} & \includegraphics[valign=t,width=0.5\textwidth]{../structure/plots/americanus-minSamples99-mac3-popmap3-K-2.pdf} \\ \vspace{1mm}
+  {\textbf{\large B)}} & \includegraphics[valign=t,width=0.5\textwidth]{../maps/out/structure-americanus-minSamples99-mac3-popmap3-K-2-labeled.pdf} \\
+\end{tabular}
+\end{figure}
+\end{document}
