@@ -40,8 +40,8 @@
 ./structure-map.py americanus-minSamples1.0-mac3-popmap2-K-3
 ./structure-map.py americanus-minSamples1.0-mac3-popmap2-K-4
 
-./structure-map.py americanus-minSamples99-mac3-popmap3-K-2 --rivers
-./structure-map.py americanus-minSamples99-mac3-popmap3-K-3 --rivers
+*./structure-map.py americanus-minSamples99-mac3-popmap3-K-2 --rivers
+*./structure-map.py americanus-minSamples99-mac3-popmap3-K-3 --rivers
 ./structure-map.py americanus-minSamples99-mac3-popmap3-K-4
 
 ## Fowleri
@@ -59,7 +59,7 @@
 ./structure-map.py terrestris-minSamples1.0-mac3-popmap2-K-4
 
 ./structure-map.py terrestris-minSamples1.0-mac3-popmap3-K-2 --rivers --extent -89.0767,-81.0538,28,33
-./structure-map.py terrestris-minSamples1.0-mac3-popmap3-K-3 --rivers --extent -89.0767,-81.0538,28,33
+*./structure-map.py terrestris-minSamples1.0-mac3-popmap3-K-3 --rivers --extent -89.0767,-81.0538,28,33
 ./structure-map.py terrestris-minSamples1.0-mac3-popmap3-K-4
 
 ## Woodhousii

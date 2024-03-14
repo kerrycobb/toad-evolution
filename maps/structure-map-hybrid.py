@@ -126,7 +126,7 @@ def map(name, extent=None, legend=None, labels=None):
     # proj = ccrs.PlateCarree()
 
     # Create plot object
-    fig = plt.figure()
+    fig = plt.figure(1)
     ax = plt.axes(projection=proj)
 
     # Add default features
@@ -157,6 +157,9 @@ def map(name, extent=None, legend=None, labels=None):
     for ix, row in gdf.iterrows():
         props = row[0:2].to_list()
         draw_pie(ax, props, row.longitude, row.latitude, row["size"], colors)
+
+    outPath = outDir + "structure-" + name + "-main.pdf" 
+    plt.savefig(outPath, bbox_inches='tight', pad_inches=0)
 
     ########################### 
     ## Create Inset 
@@ -194,11 +197,11 @@ def map(name, extent=None, legend=None, labels=None):
     # gl.ylocator = mticker.FixedLocator([25, 33, 41])
 
     # Show species ranges on inset map
-    americanus_range = gpd.read_file("range-maps/americanus-great-lakes.geojson")
+    americanus_range = gpd.read_file("range-maps/range-americanus.geojson")
     americanus_range.to_crs(inProj.proj4_params, inplace=True)
     americanus_range.plot(ax=inset_ax, facecolor=colors[0], alpha=0.85, linewidth=0)
 
-    terrestris_range = gpd.read_file("range-maps/terrestris.geojson")
+    terrestris_range = gpd.read_file("range-maps/range-terrestris.geojson")
     terrestris_range.to_crs(inProj.proj4_params, inplace=True)
     terrestris_range.plot(ax=inset_ax, facecolor=colors[1], alpha=0.85, linewidth=0)
 
@@ -221,9 +224,9 @@ def map(name, extent=None, legend=None, labels=None):
     ###########################
     ## Zoom maps
 
-    def create_zoom_ax(points, scale_pos, stream=None):
+    def create_zoom_ax(points, scale_pos, name, stream=None):
         ## Zoom 2 Map
-        lon0, lat0 = get_midpoint(gdf[points].longitude, gdf[points].latitude)
+        # lon0, lat0 = get_midpoint(gdf[points].longitude, gdf[points].latitude)
         # Create Map
         ax = fig.add_axes([1, -0.1, 0.375, 0.375], projection=proj)
         # Add features
@@ -245,7 +248,6 @@ def map(name, extent=None, legend=None, labels=None):
         if stream is not None:
             ax.autoscale(False)
             stream.plot(ax=ax, edgecolor=cfeature.COLORS["water"], linewidth=2)
-
         return ax
 
     waxahatchee = gpd.read_file("water-data/waxahatchee-creek.geojson")
@@ -253,8 +255,8 @@ def map(name, extent=None, legend=None, labels=None):
     sougahatchee = gpd.read_file("water-data/sougahatchee-creek.geojson")
     sougahatchee.to_crs(proj.proj4_params, inplace=True)
 
-    zoom1_ax = create_zoom_ax(is_zoom1, (0.9, 0.95), waxahatchee)
-    zoom2_ax = create_zoom_ax(is_zoom2, (0.1, 0.95), sougahatchee)
+    zoom1_ax = create_zoom_ax(is_zoom1, (0.9, 0.95), name + "-zoom1", waxahatchee)
+    zoom2_ax = create_zoom_ax(is_zoom2, (0.1, 0.95), name + "-zoom2", sougahatchee)
 
     ## Reposition Zoom Axes
     ax.get_figure().canvas.draw()

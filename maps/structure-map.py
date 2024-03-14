@@ -80,8 +80,10 @@ def map(name, extent=None, counties=False, rivers=False, title=None, legend=Fals
     # # proj = ccrs.Robinson()
 
     borderColor = rgb(200, 200, 200)
-    landColor = rgb(245, 245, 223)
-    waterColor = rgb(218, 228, 237)
+    # landColor = rgb(245, 245, 223)
+    landColor = "#eeeee4"
+    # waterColor = rgb(218, 228, 237)
+    waterColor = feature.COLORS["water"]
 
     fig = plt.figure()
     ax = plt.axes(projection=proj)
@@ -91,7 +93,7 @@ def map(name, extent=None, counties=False, rivers=False, title=None, legend=Fals
                    edgecolor=landColor, zorder=11)
     if rivers:
         ax.add_feature(feature.NaturalEarthFeature('physical', 'rivers_lake_centerlines', '50m'),
-                linewidth=1.5, facecolor="None", edgecolor=waterColor, zorder=22)
+                linewidth=1, facecolor="None", edgecolor=waterColor, zorder=22)
         # ax.add_feature(feature.RIVERS, linewidth=1.5, facecolor=waterColor, 
                     #    edgecolor=waterColor, zorder=22)
     ax.add_feature(feature.LAKES, linewidth=0, facecolor=waterColor, 
