@@ -31,7 +31,7 @@ plate3,77,G,5,p029,HERA 10255,,hera10255,X,,X,,,X,Anaxyrus,americanus,hera10255_
 plate3,78,G,6,p030,HERA 10350,,hera10350,X,X,X,,,X,Anaxyrus,americanus,hera10350_americanus,,,45.51395705,-69.95928163,,,nhei,NheI_G,CTGCAACTG,ecori,EcoRI_6,GTATGCAT
 plate3,79,G,7,p031,HERA 10372,,hera10372,X,,X,,,X,Anaxyrus,americanus,hera10372_americanus,,,42.22794785,-79.36759006,,,nhei,NheI_G,CTGCAACTG,ecori,EcoRI_7,CACATGTCT
 plate3,80,G,8,p032,HERA 10396,,hera10396,X,X,X,,,X,Anaxyrus,fowleri,hera10396_fowleri,,,41.80663095,-72.73281062,,,nhei,NheI_G,CTGCAACTG,ecori,EcoRI_8,TGTGCACGAT
-plate3,81,G,9,p033,HERA 10484,,hera10484,X,,,,,X,Anaxyrus,marina,hera10484_marina,,,25.61296337,-80.56605548,,,nhei,NheI_G,CTGCAACTG,ecori,EcoRI_9,GCATCAT
+plate3,81,G,9,p033,HERA 10484,,hera10484,X,,,,,X,Rhinella,marina,hera10484_marina,,,25.61296337,-80.56605548,,,nhei,NheI_G,CTGCAACTG,ecori,EcoRI_9,GCATCAT
 plate3,82,G,10,p034,HERA 10493,,hera10493,X,X,X,,,X,Anaxyrus,fowleri,hera10493_fowleri,,,39.08588343,-75.56843744,,,nhei,NheI_G,CTGCAACTG,ecori,EcoRI_10,ATGCTGTT
 plate3,83,G,11,p035,HERA 11976,,hera11976,X,,X,,,X,Anaxyrus,americanus,hera11976_americanus,,,43.51819011,-71.42336011,,,nhei,NheI_G,CTGCAACTG,ecori,EcoRI_11,CATGACCTT
 plate3,84,G,12,p036,HERA 13722,,hera13722,X,,,,,X,Anaxyrus,fowleri,hera13722_fowleri,,,36.55513857,-89.18928557,,,nhei,NheI_G,CTGCAACTG,ecori,EcoRI_12,TGCAGTGAGT
@@ -244,7 +244,7 @@ plate2,78,G,6,p237,AUHT 8175,,kac239,X,,X,X,X,,Anaxyrus,terrestris,kac239_terres
 plate2,79,G,7,p238,AUHT 8176,,kac240,X,,X,,,,Anaxyrus,fowleri,kac240_fowleri,,f,32.6432798,-85.3711405,2020,6,nhei,NheI_G,CTGCAACTG,ecori,EcoRI_7,CACATGTCT
 plate2,80,G,8,p239,AUHT 8177,,kac241,X,,X,,,,Anaxyrus,fowleri,kac241_fowleri,,f,32.6432798,-85.3711405,2020,6,nhei,NheI_G,CTGCAACTG,ecori,EcoRI_8,TGTGCACGAT
 plate2,81,G,9,p240,AUHT 8178,,kac242,X,,X,X,X,,Anaxyrus,americanus,kac242_americanus,,m,34.504456,-85.637683,2020,7,nhei,NheI_G,CTGCAACTG,ecori,EcoRI_9,GCATCAT
-plate2,82,G,10,p241,AUHT 8179,,kac243,X,X,,,,,Incillius,nebulifer,kac243_nebulifer,,,30.391397,-90.620491,,,nhei,NheI_G,CTGCAACTG,ecori,EcoRI_10,ATGCTGTT
+plate2,82,G,10,p241,AUHT 8179,,kac243,X,X,,,,,Incilius,nebulifer,kac243_nebulifer,,,30.391397,-90.620491,,,nhei,NheI_G,CTGCAACTG,ecori,EcoRI_10,ATGCTGTT
 plate2,83,G,11,p242,AUHT 8180,,kac244,X,,,,,,Anaxyrus,fowleri,kac244_fowleri,,m,32.8926113,-93.8875622,2021,9,nhei,NheI_G,CTGCAACTG,ecori,EcoRI_11,CATGACCTT
 plate3,24,B,12,p243,MSB 100793,,msb100793,X,X,,,,X,Anaxyrus,microscaphus,msb100793_microscaphus,,,37.27153801,-114.464781,2020,,nhei,NheI_B,TTAGGCAG,ecori,EcoRI_12,TGCAGTGAGT
 plate3,25,C,1,p244,MSB 100800,,msb100800,X,X,X,,,X,Anaxyrus,woodhousii,msb100800_woodhousii,,,36.73611667,-114.2197167,2020,,nhei,NheI_C,AACTCGTCG,ecori,EcoRI_1,CTAACGT

@@ -27,21 +27,24 @@ def makeTable(df, path):
     d["instrument_model"] = "Illumina HiSeq X"
     d["design_description"] = "Double digest RADseq library prepared using 2RAD method"
     d["filetype"] = "fastq"
-    d["filename"] = df["sample_id"] + "_R1_.fq"
-    d["filename2"] = df["sample_id"] + "_R2_.fq"
+    d["filename"] = df["sample_id"] + ".1.fq.gz"
+    d["filename2"] = df["sample_id"] + ".2.fq.gz"
 
     d.to_csv(path, sep="\t", index=False)
 
 
 df = pd.read_csv("sample-data.csv")
 df.drop_duplicates(subset=["sample_id"], inplace=True)
+df['id'].fillna(df['sample_id'], inplace=True)
 
-makeTable(
-    df[df["hyb-zone"] == 'X'],
-    "genbank-hybrid-zone.csv")
+makeTable(df[(df["hyb-zone"] == 'X') | (df["phylo"] == 'X')], "genbank-submission-file.tsv")
 
-makeTable(
-    df[df["phylo"] == 'X'],
-    "genbank-phylo.csv")
+# makeTable(
+#     df[df["hyb-zone"] == 'X'],
+#     "genbank-hybrid-zone.tsv")
+
+# makeTable(
+#     df[df["phylo"] == 'X'],
+#     "genbank-phylo.tsv")
 
 
