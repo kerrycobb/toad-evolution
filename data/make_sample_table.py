@@ -48,7 +48,7 @@ template = Template(r"""
     {% if not loop.last %} \\ {% endif +%}
 {% endfor %}
 
-\label{table:{{ label }} }
+\label{table:{{ label }}}
 \end{longtable}
 """,
 trim_blocks=True,
@@ -61,7 +61,7 @@ def makeTable(df, path, caption, label):
         fh.write(out)
 
 
-df = pd.read_csv("sample-data.csv", na_filter=False)
+df = pd.read_csv("sample-data-genbank.csv", na_filter=False)
 df = df.rename(columns={
     "proj_id": "ID",
     "id": "Voucher",

@@ -125,15 +125,15 @@ def summary(outDir, chains, burnin, interval):
     # Check that there is complete overlap between alpha outlier types 
     print(f"Number of alpha outlier loci overalpping: {sum(alpha_covered & alpha_out)}")
 
-    ## Plot clines and outliers
-    cline_plot(
-        alpha=alpha.summary["median"], 
-        beta=beta.summary["median"], 
-        outliers=[pos_alpha_out, neg_alpha_out], 
-        outlier_label=["<i>americanus</i>", "<i>terrestris</i>"],
-        outlier_color=[colors[0], colors[1]],
-        yaxis_label="<i>americanus</i> Ancestry Probability"
-    ).write_image(outDir + "/cline-outliers.pdf")
+    # ## Plot clines and outliers
+    # cline_plot(
+    #     alpha=alpha.summary["median"], 
+    #     beta=beta.summary["median"], 
+    #     outliers=[pos_alpha_out, neg_alpha_out], 
+    #     outlier_label=["<i>americanus</i>", "<i>terrestris</i>"],
+    #     outlier_color=[colors[0], colors[1]],
+    #     yaxis_label="<i>americanus</i> Ancestry Probability"
+    # ).write_image(outDir + "/cline-outliers.pdf")
 
 
     # # # Code to visualize conditional prior distribution along with the posterior 
@@ -204,6 +204,7 @@ def summary(outDir, chains, burnin, interval):
     print(krus)
 
     import scikit_posthocs as sp
+    from scipy.stats import mannwhitneyu
    
     fst_neg_alpha_out_df =  pd.DataFrame(fst_neg_alpha_out, columns=["fst"])
     fst_pos_alpha_out_df =  pd.DataFrame(fst_pos_alpha_out, columns=["fst"])
@@ -213,11 +214,18 @@ def summary(outDir, chains, burnin, interval):
     fst_neutral_alpha_df["group"] = "netural"
     fst_df  = pd.concat([fst_neg_alpha_out_df, fst_pos_alpha_out_df, fst_neutral_alpha_df], ignore_index=True, axis=0)
     mann_whit = sp.posthoc_mannwhitney(fst_df, val_col="fst", group_col="group")
-    print("Mann-Whitney Uncorrected P-values")
+    print("Mann-Whitney Uncorrected P-values:")
     print(mann_whit)
-    # mann_whit = sp.posthoc_mannwhitney(fst_df, val_col="fst", group_col="group", p_adjust="bonferroni")
-    # print(mann_whit)
-
+    print("Mann-Whitney Bonferroni corrected P-values:")
+    mann_whit = sp.posthoc_mannwhitney(fst_df, val_col="fst", group_col="group", p_adjust="bonferroni")
+    print(mann_whit)
+    print("Scipy Stats:")
+    mann_whit = mannwhitneyu(fst_neg_alpha_out, fst_neutral_alpha)
+    print("Neg-Neut: ", mann_whit)
+    mann_whit = mannwhitneyu(fst_pos_alpha_out, fst_neutral_alpha)
+    print("Pos-Neut: ", mann_whit)
+    mann_whit = mannwhitneyu(fst_pos_alpha_out, fst_neg_alpha_out)
+    print("Pos-Neg: ", mann_whit)
 
 
 
