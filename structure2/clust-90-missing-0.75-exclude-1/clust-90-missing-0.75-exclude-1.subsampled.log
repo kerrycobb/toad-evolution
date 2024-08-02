@@ -1,0 +1,13 @@
+
+VCFtools - 0.1.17
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf clust-90-missing-0.75-exclude-1.subsampled.recode.vcf
+	--missing-indv
+	--out clust-90-missing-0.75-exclude-1.subsampled
+
+After filtering, kept 143 out of 143 Individuals
+Outputting Individual Missingness
+After filtering, kept 1260 out of a possible 1260 Sites
+Run Time = 0.00 seconds

@@ -1,0 +1,23 @@
+
+VCFtools - 0.1.17
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /home/kac0070/scratch/anaxyrus/pyrad/clust-90-defaults_outfiles/clust-90-defaults.vcf
+	--remove ../exclude-non-americanus-group.txt
+	--remove ../exclude-fowleri-woodhousii.txt
+	--remove ../exclude-outside-of-area.txt
+	--remove exclude-missing-data-clust-90-missing-0.75-exclude-1.txt
+	--recode-INFO-all
+	--mac 3
+	--max-alleles 2
+	--max-missing 0.75
+	--out clust-90-missing-0.75-exclude-1
+	--recode
+	--remove-indels
+
+Excluding individuals in 'exclude' list
+After filtering, kept 143 out of 283 Individuals
+Outputting VCF file...
+After filtering, kept 15838 out of a possible 921826 Sites
+Run Time = 39.00 seconds
